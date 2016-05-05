@@ -1,0 +1,2314 @@
+r307 | fkb_159357@163.com | 2016-05-06 00:19:42 CST
+Changed paths:
+	M /1/core/let/test/mdl.php
+----------------------------------------------------------------------------
+r306 | fkb_159357@163.com | 2016-04-18 23:49:54 CST
+Changed paths:
+	M /1/core/base/__route.php
+
+指令使用方式建议：在一个请求中，如能保证所有参数值不会出现空字符串的情况，则可以用“位于左起第一个且没有值的参数名”作为shell。否则，要以“x”参数的值作为shell
+----------------------------------------------------------------------------
+r305 | fkb_159357@163.com | 2016-04-18 18:36:19 CST
+Changed paths:
+	M /1/core/base/__route.php
+
+isAllowRewrite暂时禁用条件：request_args中下标为零且值为空串的参数不存在
+----------------------------------------------------------------------------
+r304 | fkb_159357@163.com | 2016-04-18 00:28:51 CST
+Changed paths:
+	A /1/core/let/test/ai.php
+----------------------------------------------------------------------------
+r303 | fkb_159357@163.com | 2016-04-13 00:44:25 CST
+Changed paths:
+	M /1/core/base/__route.php
+
+修复BUG，以支持纯数字SHELL。
+另外，发现PHP等号比较的坑：var_dump('0'!='a', '0'=='a', 0!='a', 0=='a');//true,false,false,true
+
+----------------------------------------------------------------------------
+r302 | fkb_159357@163.com | 2016-04-12 18:18:47 CST
+Changed paths:
+	M /1/core/base/__route.php
+
+支持REWRITE（非问号URL）模式下，直接使用非ASCII码，也能保证非REWRITE模式下同一个SHELL能够获得一致的体验。
+如  http://abc.com/?汉字   等同于  http://abc.com/汉字，不会出现URLENCODE转换的情况
+----------------------------------------------------------------------------
+r301 | fkb_159357@163.com | 2016-04-12 01:44:51 CST
+Changed paths:
+	M /1/core/config/define.php
+	M /1/core/base/__route.php
+
+1、rewrite2支持潜规则重写：没有特定配置的规则，都按照URI原样作为UrlShell
+2、DIUrlShell::regexpshell()的配置的SHELL定向可能会与DIRouteRewrite::$rulesMap配置冲突
+----------------------------------------------------------------------------
+r300 | fkb_159357@163.com | 2016-04-09 22:28:23 CST
+Changed paths:
+	M /1/core/base/__lib.php
+
+修正$GLOBALS['request_args']的获取方式，支持数字参数名
+----------------------------------------------------------------------------
+r299 | fkb_159357@163.com | 2016-04-09 18:25:34 CST
+Changed paths:
+	M /1/core/config/urlshell.php
+	M /1/core/base/__route.php
+	A /1/core/let/diyroute.php
+
+加入REGEXPSHELL，通过正则支持灵活路由
+----------------------------------------------------------------------------
+r298 | fkb_159357@163.com | 2016-04-09 16:51:31 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+修正算法：资源均衡s1~s9
+----------------------------------------------------------------------------
+r297 | fkb_159357@163.com | 2016-04-09 16:25:41 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+修正资源均衡s1~s9算法
+----------------------------------------------------------------------------
+r296 | fkb_159357@163.com | 2016-04-03 22:49:28 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+----------------------------------------------------------------------------
+r295 | fkb_159357@163.com | 2016-04-03 01:58:07 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+----------------------------------------------------------------------------
+r294 | fkb_159357@163.com | 2016-03-31 01:40:10 CST
+Changed paths:
+	A /1/core/setting/larele.com.ssl.zip
+
+larele.com证书
+----------------------------------------------------------------------------
+r293 | fkb_159357@163.com | 2016-03-18 19:51:21 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+	A /1/core/tpl/link-start.html
+----------------------------------------------------------------------------
+r292 | fkb_159357@163.com | 2016-03-18 19:26:36 CST
+Changed paths:
+	M /1/core/do/Link.do.php
+----------------------------------------------------------------------------
+r291 | fkb_159357@163.com | 2016-03-18 18:34:14 CST
+Changed paths:
+	M /1/core/setting/dir-secure.txt
+----------------------------------------------------------------------------
+r290 | fkb_159357@163.com | 2016-03-07 15:58:09 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_footer.html
+----------------------------------------------------------------------------
+r289 | fkb_159357@163.com | 2016-03-07 14:03:45 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_footer.html
+----------------------------------------------------------------------------
+r288 | fkb_159357@163.com | 2016-03-04 19:49:53 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r287 | fkb_159357@163.com | 2016-03-04 15:48:18 CST
+Changed paths:
+	M /1/core/base/__lib.php
+----------------------------------------------------------------------------
+r286 | fkb_159357@163.com | 2016-02-12 23:55:26 CST
+Changed paths:
+	M /1/core/do/Link.do.php
+----------------------------------------------------------------------------
+r285 | fkb_159357@163.com | 2016-02-12 23:49:26 CST
+Changed paths:
+	M /1/core/do/Link.do.php
+----------------------------------------------------------------------------
+r284 | fkb_159357@163.com | 2016-01-06 00:34:35 CST
+Changed paths:
+	A /1/core/setting/larele-20160106-Struct_ImportantData.sql
+
+20150106data
+----------------------------------------------------------------------------
+r283 | fkb_159357@163.com | 2016-01-06 00:19:20 CST
+Changed paths:
+	M /1/core/setting/deploy.txt
+
+larele前置命令补充
+----------------------------------------------------------------------------
+r282 | fkb_159357@163.com | 2015-12-30 18:37:49 CST
+Changed paths:
+	M /1/core/let/test/fightjgy.php
+----------------------------------------------------------------------------
+r281 | fkb_159357@163.com | 2015-12-30 15:53:45 CST
+Changed paths:
+	M /1/core/let/test/fightjgy.php
+
+二代金馆鱼
+----------------------------------------------------------------------------
+r280 | fkb_159357@163.com | 2015-12-30 00:12:55 CST
+Changed paths:
+	M /1/core/let/test/fightjgy.php
+----------------------------------------------------------------------------
+r279 | fkb_159357@163.com | 2015-12-03 22:07:50 CST
+Changed paths:
+	M /1/core/let/test/mdl.php
+	A /1/res/biz/test/mdl/material-design-lite_1-0-6_material.min.js
+	A /1/res/biz/test/mdl/google-mdl-icons
+	A /1/res/biz/test/mdl
+	A /1/res/biz/test/mdl/material-design-lite_1-0-6_material.min.css
+
+mdl资源本地化
+----------------------------------------------------------------------------
+r278 | fkb_159357@163.com | 2015-12-01 14:07:32 CST
+Changed paths:
+	M /1/core/config/database.php
+----------------------------------------------------------------------------
+r277 | fkb_159357@163.com | 2015-11-22 23:41:07 CST
+Changed paths:
+	A /1/core/let/test/mdl.php
+
+test.mdl
+----------------------------------------------------------------------------
+r276 | fkb_159357@163.com | 2015-10-25 20:13:15 CST
+Changed paths:
+	M /1/core/base/__model.php
+
+修正DIModel的单例模式处理，仅在统一个表名下，才生成单例；换表名时，则会生成新的单例
+----------------------------------------------------------------------------
+r275 | fkb_159357@163.com | 2015-10-23 15:32:31 CST
+Changed paths:
+	M /1/core/setting/deploy.txt
+
+deploy.txt同步代码后，删除站点根目录下的.git目录
+----------------------------------------------------------------------------
+r274 | fkb_159357@163.com | 2015-10-16 11:39:26 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+资源均衡s1~s9：忽略res.miku.us的图片，不记入cookie
+----------------------------------------------------------------------------
+r273 | fkb_159357@163.com | 2015-10-14 18:31:31 CST
+Changed paths:
+	M /1/core/setting/deploy.txt
+
+deploy的clone加上前置命令
+----------------------------------------------------------------------------
+r272 | fkb_159357@163.com | 2015-10-13 14:01:50 CST
+Changed paths:
+	D /1/core/setting/larele-20151012-Struct_ImportantData.sql
+	A /1/core/setting/larele-20151013-Struct_ImportantData.sql
+----------------------------------------------------------------------------
+r271 | fkb_159357@163.com | 2015-10-12 13:55:10 CST
+Changed paths:
+	A /1/core/setting/larele-20151012-Struct_ImportantData.sql
+----------------------------------------------------------------------------
+r270 | fkb_159357@163.com | 2015-10-10 14:09:50 CST
+Changed paths:
+	M /1/core/base/__exception.php
+----------------------------------------------------------------------------
+r269 | fkb_159357@163.com | 2015-10-03 12:12:16 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+资源均衡，并缓存分配的地址
+----------------------------------------------------------------------------
+r268 | fkb_159357@163.com | 2015-09-30 15:26:03 CST
+Changed paths:
+	M /1/core/config/filtermap.php
+	A /1/core/filter/PostLog.filter.php
+	A /1/core/filter/GetLog.filter.php
+
+记录GET、POST记录
+----------------------------------------------------------------------------
+r267 | fkb_159357@163.com | 2015-09-16 00:41:00 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+	M /1/core/setting/larele.vhost
+	M /1/.htaccess
+
+恢复.htaccess和vhost.conf
+----------------------------------------------------------------------------
+r266 | fkb_159357@163.com | 2015-09-16 00:26:41 CST
+Changed paths:
+	M /1/core/config/rewrite.php
+	M /1/core/tpl/posts/posts_duoshuo.html
+
+放宽rewrite的.po规则，抑制BUG
+----------------------------------------------------------------------------
+r265 | fkb_159357@163.com | 2015-09-15 19:27:36 CST
+Changed paths:
+	M /1/core/config/rewrite.php
+	M /1/res/biz/posts/posts.js
+
+列表链接使用.po后缀
+----------------------------------------------------------------------------
+r264 | fkb_159357@163.com | 2015-09-15 00:51:45 CST
+Changed paths:
+	M /1/core/setting/larele.vhost
+----------------------------------------------------------------------------
+r263 | fkb_159357@163.com | 2015-09-14 23:36:51 CST
+Changed paths:
+	M /1/.htaccess
+	M /1/core/setting/larele.vhost
+
+apache重写兼容zendserver
+----------------------------------------------------------------------------
+r262 | fkb_159357@163.com | 2015-09-14 03:00:39 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+	M /1/core/filter/PostsWrite.filter.php
+	M /1/core/tpl/posts-pub.html
+	M /1/core/tpl/posts-getlist.html
+	M /1/core/tpl/posts-edit.html
+
+PO加入摘要字段后，对代码的改动
+----------------------------------------------------------------------------
+r261 | fkb_159357@163.com | 2015-09-14 02:35:09 CST
+Changed paths:
+	A /1/core/setting/larele-20150914-Struct_ImportantData.sql
+	A /1/core/setting/larele-patch-20150914.sql
+
+PO表增加摘要字段
+----------------------------------------------------------------------------
+r260 | fkb_159357@163.com | 2015-09-13 01:57:14 CST
+Changed paths:
+	M /1/core/base/__inject.php
+
+recall()修正BUG
+----------------------------------------------------------------------------
+r259 | fkb_159357@163.com | 2015-09-12 20:10:47 CST
+Changed paths:
+	M /1/core/tpl/posts-content.html
+	M /1/core/tpl/posts-getlist.html
+
+列表和内容页加上隐藏标识
+----------------------------------------------------------------------------
+r258 | fkb_159357@163.com | 2015-09-12 03:38:52 CST
+Changed paths:
+	A /1/core/setting/larele-20150912-Struct_ImportantData.sql
+	M /1/core/do/Posts.do.php
+
+列表和内容页处理隐藏逻辑
+----------------------------------------------------------------------------
+r257 | fkb_159357@163.com | 2015-09-12 03:18:27 CST
+Changed paths:
+	A /1/core/setting/larele-patch-20150912.sql
+
+文章加用于隐藏的字段
+----------------------------------------------------------------------------
+r256 | fkb_159357@163.com | 2015-09-11 00:40:32 CST
+Changed paths:
+	M /1/core/base/__model.php
+
+__model.php修复确实的DIException
+----------------------------------------------------------------------------
+r255 | fkb_159357@163.com | 2015-09-11 00:32:50 CST
+Changed paths:
+	M /1/core/base/__model.php
+
+支持Model名到下划线表名的转换规则：AbcDefGh=>Abc_Aef_Gh
+----------------------------------------------------------------------------
+r254 | fkb_159357@163.com | 2015-09-09 00:32:50 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+在posts_layout添加百度移动页面跳转代码
+----------------------------------------------------------------------------
+r253 | fkb_159357@163.com | 2015-09-09 00:19:34 CST
+Changed paths:
+	A /1/tc_verify.txt
+
+百度移动页面生成验证
+----------------------------------------------------------------------------
+r252 | fkb_159357@163.com | 2015-09-09 00:19:04 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+----------------------------------------------------------------------------
+r251 | fkb_159357@163.com | 2015-09-09 00:03:47 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+baidu-tc-verification百度移动页面生成:验证
+----------------------------------------------------------------------------
+r250 | fkb_159357@163.com | 2015-09-06 20:57:28 CST
+Changed paths:
+	A /1/core/ext/dw
+	A /1/core/filter/Xhprof.filter.php
+	A /1/core/ext/dw/dwXhprof.php
+	M /1/core/config/filtermap.php
+
+准备加入xhprof
+----------------------------------------------------------------------------
+r249 | fkb_159357@163.com | 2015-09-04 02:19:36 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_right.html
+	M /1/core/tpl/posts/posts_header.html
+----------------------------------------------------------------------------
+r248 | fkb_159357@163.com | 2015-09-02 01:59:00 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+----------------------------------------------------------------------------
+r247 | fkb_159357@163.com | 2015-09-02 01:56:15 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+----------------------------------------------------------------------------
+r246 | fkb_159357@163.com | 2015-09-02 01:50:17 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+	M /1/core/do/Posts.do.php
+
+标题处理
+----------------------------------------------------------------------------
+r245 | fkb_159357@163.com | 2015-08-31 22:02:19 CST
+Changed paths:
+	A /1/core/ext/time/WeekUtil.php
+	A /1/core/ext/time
+
+WeekUtil
+----------------------------------------------------------------------------
+r244 | fkb_159357@163.com | 2015-08-24 05:35:05 CST
+Changed paths:
+	A /1/core/tpl/posts/posts_duoshuo.html
+	M /1/core/tpl/posts-content.html
+	M /1/core/do/Posts.do.php
+
+嵌入多说
+----------------------------------------------------------------------------
+r243 | fkb_159357@163.com | 2015-08-16 02:18:30 CST
+Changed paths:
+	A /1/res/lib/heatmap.min.js
+
+heatmap
+----------------------------------------------------------------------------
+r242 | fkb_159357@163.com | 2015-08-15 21:52:25 CST
+Changed paths:
+	M /1/core/let/test/useit.php
+
+禁用useit缓存
+----------------------------------------------------------------------------
+r241 | fkb_159357@163.com | 2015-08-15 21:27:05 CST
+Changed paths:
+	A /1/core/setting/larele.vhost
+	A /1/core/setting/dir-secure.txt
+
+vhost
+----------------------------------------------------------------------------
+r240 | fkb_159357@163.com | 2015-08-15 19:44:13 CST
+Changed paths:
+	M /1/core/base/__base.php
+
+DIRuntime加入非严格模式
+----------------------------------------------------------------------------
+r239 | fkb_159357@163.com | 2015-08-15 18:08:40 CST
+Changed paths:
+	M /1/core/let/test/useit.php
+----------------------------------------------------------------------------
+r238 | fkb_159357@163.com | 2015-08-15 17:26:17 CST
+Changed paths:
+	M /1/core/let/test/useit.php
+
+useit
+----------------------------------------------------------------------------
+r237 | fkb_159357@163.com | 2015-08-15 17:16:12 CST
+Changed paths:
+	A /1/core/let/test/useit.php
+
+useit消耗流量
+----------------------------------------------------------------------------
+r236 | fkb_159357@163.com | 2015-08-12 02:30:31 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+	M /1/core/do/Posts.do.php
+
+顶部标题限制字数
+----------------------------------------------------------------------------
+r235 | fkb_159357@163.com | 2015-08-12 02:03:56 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+	M /1/core/do/Link.do.php
+----------------------------------------------------------------------------
+r234 | fkb_159357@163.com | 2015-08-12 02:01:28 CST
+Changed paths:
+	M /1/core/do/Link.do.php
+	M /1/core/tpl/posts/posts_header.html
+----------------------------------------------------------------------------
+r233 | fkb_159357@163.com | 2015-08-12 01:43:39 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+----------------------------------------------------------------------------
+r232 | fkb_159357@163.com | 2015-08-12 01:25:10 CST
+Changed paths:
+	M /1/core/do/Link.do.php
+----------------------------------------------------------------------------
+r231 | fkb_159357@163.com | 2015-08-11 21:29:46 CST
+Changed paths:
+	M /1/.gitignore
+----------------------------------------------------------------------------
+r230 | fkb_159357@163.com | 2015-08-11 21:23:02 CST
+Changed paths:
+	M /1/.gitignore
+----------------------------------------------------------------------------
+r229 | fkb_159357@163.com | 2015-08-11 21:08:59 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+	A /1/core/do/Link.do.php
+	M /1/core/do/Mirror.do.php
+	M /1/core/config/rewrite.php
+
+添加conoha跳转
+----------------------------------------------------------------------------
+r228 | fkb_159357@163.com | 2015-08-11 16:43:12 CST
+Changed paths:
+	M /1
+----------------------------------------------------------------------------
+r227 | fkb_159357@163.com | 2015-08-10 22:29:03 CST
+Changed paths:
+	M /1/.gitignore
+----------------------------------------------------------------------------
+r226 | fkb_159357@163.com | 2015-08-10 22:24:36 CST
+Changed paths:
+	M /1/core/setting/deploy.txt
+----------------------------------------------------------------------------
+r225 | fkb_159357@163.com | 2015-08-10 22:19:49 CST
+Changed paths:
+	M /1/core/setting/create_user.sql
+	M /1/.gitignore
+	M /1/core/config/database.php
+	A /1/core/setting/deploy.txt
+	D /1/git-hostker.txt
+
+deploy to linode
+----------------------------------------------------------------------------
+r224 | fkb_159357@163.com | 2015-08-10 20:58:19 CST
+Changed paths:
+	A /1/core/setting/larele-20150810-Struct_ImportantData.sql
+	D /1/core/setting/larele-20150801-Struct_ImportantData.sql
+
+data
+----------------------------------------------------------------------------
+r223 | fkb_159357@163.com | 2015-08-09 15:38:06 CST
+Changed paths:
+	A /1/core/do/Mirror.do.php
+
+Mirror.do
+----------------------------------------------------------------------------
+r222 | fkb_159357@163.com | 2015-08-06 14:46:36 CST
+Changed paths:
+	M /1/.idea/workspace.xml
+----------------------------------------------------------------------------
+r221 | fkb_159357@163.com | 2015-08-04 21:42:58 CST
+Changed paths:
+	M /1/.gitignore
+----------------------------------------------------------------------------
+r220 | fkb_159357@163.com | 2015-08-04 21:42:48 CST
+Changed paths:
+	M /1/res/tmp/index.html
+----------------------------------------------------------------------------
+r219 | fkb_159357@163.com | 2015-08-04 21:41:53 CST
+Changed paths:
+	D /1/core/data/index.html
+----------------------------------------------------------------------------
+r218 | fkb_159357@163.com | 2015-08-04 21:04:51 CST
+Changed paths:
+	A /1/git-hostker.txt
+	M /1/.gitignore
+	M /1
+----------------------------------------------------------------------------
+r217 | fkb_159357@163.com | 2015-08-04 20:50:17 CST
+Changed paths:
+	A /1/.gitignore
+
+加入.gitignore for hostker
+----------------------------------------------------------------------------
+r216 | fkb_159357@163.com | 2015-08-04 20:48:58 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_widgets.html
+
+self
+----------------------------------------------------------------------------
+r215 | fkb_159357@163.com | 2015-08-04 04:28:54 CST
+Changed paths:
+	A /1/core/filter/GlobalCache.filter.php
+	M /1/core/config/filtermap.php
+
+global cache
+----------------------------------------------------------------------------
+r214 | fkb_159357@163.com | 2015-08-02 01:37:16 CST
+Changed paths:
+	M /1/core/setting/larele-20150801-Struct_ImportantData.sql
+----------------------------------------------------------------------------
+r213 | fkb_159357@163.com | 2015-08-01 18:15:40 CST
+Changed paths:
+	A /1/core/setting/larele-20150801-Struct_ImportantData.sql
+----------------------------------------------------------------------------
+r212 | fkb_159357@163.com | 2015-07-18 17:55:13 CST
+Changed paths:
+	M /1/core/base/__inject.php
+
+修正recall
+----------------------------------------------------------------------------
+r211 | fkb_159357@163.com | 2015-07-18 17:43:55 CST
+Changed paths:
+	M /1/core/base/__inject.php
+
+加入recall()
+----------------------------------------------------------------------------
+r210 | fkb_159357@163.com | 2015-07-18 17:10:35 CST
+Changed paths:
+	M /1/core/base/__inject.php
+----------------------------------------------------------------------------
+r209 | fkb_159357@163.com | 2015-07-15 03:36:48 CST
+Changed paths:
+	M /1/core/let/test/fightjgy.php
+----------------------------------------------------------------------------
+r208 | fkb_159357@163.com | 2015-07-15 02:51:44 CST
+Changed paths:
+	M /1/core/let/test/fightjgy.php
+
+金馆鱼拖动(仅Chrome浏览器)
+----------------------------------------------------------------------------
+r207 | fkb_159357@163.com | 2015-07-14 08:36:18 CST
+Changed paths:
+	M /1/core/let/test/fightjgy.php
+
+fightjgy控制基础
+----------------------------------------------------------------------------
+r206 | fkb_159357@163.com | 2015-07-14 02:03:53 CST
+Changed paths:
+	A /1/core/let/test/fightjgy.php
+
+增加啊fightjgy
+----------------------------------------------------------------------------
+r205 | fkb_159357@163.com | 2015-07-13 00:33:55 CST
+Changed paths:
+	A /1/core/let/test/banconsole.php
+
+banconsole
+----------------------------------------------------------------------------
+r204 | fkb_159357@163.com | 2015-07-12 17:12:35 CST
+Changed paths:
+	A /1/core/let/vps/banssh.php
+	A /1/core/let/vps
+
+banssh
+----------------------------------------------------------------------------
+r203 | fkb_159357@163.com | 2015-07-11 16:26:03 CST
+Changed paths:
+	M /1/core/let/test/regular.php
+----------------------------------------------------------------------------
+r202 | fkb_159357@163.com | 2015-07-11 15:29:49 CST
+Changed paths:
+	M /1/core/let/test/regular.php
+
+test.regular体验
+----------------------------------------------------------------------------
+r201 | fkb_159357@163.com | 2015-07-11 15:01:52 CST
+Changed paths:
+	M /1/core/let/test/regular.php
+----------------------------------------------------------------------------
+r200 | fkb_159357@163.com | 2015-07-11 14:59:03 CST
+Changed paths:
+	M /1/core/let/test/regular.php
+----------------------------------------------------------------------------
+r199 | fkb_159357@163.com | 2015-07-11 14:57:46 CST
+Changed paths:
+	M /1/core/let/test/regular.php
+
+test.regular样式
+----------------------------------------------------------------------------
+r198 | fkb_159357@163.com | 2015-07-11 14:17:29 CST
+Changed paths:
+	A /1/core/let/test/regular.php
+
+增加test.regular
+----------------------------------------------------------------------------
+r197 | fkb_159357@163.com | 2015-07-11 11:44:41 CST
+Changed paths:
+	A /1/res/biz/test/3d/anaglyph/pz.png
+	A /1/res/biz/test/3d/tangular/o2.jpg
+	A /1/res/biz/test/3d
+	A /1/res/biz/test/3d/anaglyph/nx.png
+	A /1/res/biz/test/3d/anaglyph/px.png
+	D /1/core/let/test/cms.php
+	A /1/core/let/test/3d
+	A /1/res/biz/test/3d/anaglyph/nz.png
+	A /1/res/biz/test/3d/anaglyph/py.png
+	A /1/core/let/test/3d/anaglyph.php
+	A /1/res/biz/test
+	A /1/core/let/test/tudou.php
+	A /1/core/let/test/3d/tangular.php
+	A /1/res/biz/test/3d/anaglyph/ny.png
+	A /1/res/biz/test/3d/anaglyph
+	A /1/core/let/test/3d/materialvideo.php
+	A /1/res/biz/test/3d/tangular
+
+添加3D TEST；添加硕鼠土豆解析Demo(不完整)
+----------------------------------------------------------------------------
+r196 | fkb_159357@163.com | 2015-06-26 10:09:03 CST
+Changed paths:
+	M /1/core/let/test/cms.php
+
+筛选器:加入前端传入参数测试
+----------------------------------------------------------------------------
+r195 | fkb_159357@163.com | 2015-06-26 03:31:16 CST
+Changed paths:
+	M /1/core/let/test/cms.php
+
+查看序列化的筛选器
+----------------------------------------------------------------------------
+r194 | fkb_159357@163.com | 2015-06-26 03:29:42 CST
+Changed paths:
+	M /1/core/let/test/cms.php
+
+筛选器管理测试完成
+----------------------------------------------------------------------------
+r193 | fkb_159357@163.com | 2015-06-26 03:11:15 CST
+Changed paths:
+	M /1/core/let/test/cms.php
+----------------------------------------------------------------------------
+r192 | fkb_159357@163.com | 2015-06-26 03:10:59 CST
+Changed paths:
+	M /1/core/let/test/cms.php
+
+整个筛选器解码完成
+----------------------------------------------------------------------------
+r191 | fkb_159357@163.com | 2015-06-26 02:40:59 CST
+Changed paths:
+	A /1/core/let/test/cms.php
+
+CMS复合条件组合与解码
+----------------------------------------------------------------------------
+r190 | fkb_159357@163.com | 2015-06-24 10:02:54 CST
+Changed paths:
+	M /1/res/lib/jquery.pjax.min.js
+----------------------------------------------------------------------------
+r189 | fkb_159357@163.com | 2015-06-24 10:02:46 CST
+Changed paths:
+	M /1/res/lib/jquery.pjax.min.js
+----------------------------------------------------------------------------
+r188 | fkb_159357@163.com | 2015-06-23 10:20:17 CST
+Changed paths:
+	M /1/res/biz/posts/posts.js
+----------------------------------------------------------------------------
+r187 | fkb_159357@163.com | 2015-06-21 16:48:14 CST
+Changed paths:
+	M /1/res/biz/posts/posts.js
+
+Autoversioning commit:  a non-deltaV client made a change to
+/1/res/biz/posts/posts.js
+----------------------------------------------------------------------------
+r186 | fkb_159357@163.com | 2015-06-21 16:47:49 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+Autoversioning commit:  a non-deltaV client made a change to
+/1/core/tpl/posts/posts_layout.html
+----------------------------------------------------------------------------
+r185 | fkb_159357@163.com | 2015-06-21 16:42:22 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+Autoversioning commit:  a non-deltaV client made a change to
+/1/core/tpl/posts/posts_layout.html
+----------------------------------------------------------------------------
+r184 | fkb_159357@163.com | 2015-06-21 16:41:58 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+
+Autoversioning commit:  a non-deltaV client made a change to
+/1/core/tpl/posts/posts_layout.html
+----------------------------------------------------------------------------
+r183 | fkb_159357@163.com | 2015-06-21 16:40:26 CST
+Changed paths:
+	M /1/res/biz/posts/posts.js
+
+Autoversioning commit:  a non-deltaV client made a change to
+/1/res/biz/posts/posts.js
+----------------------------------------------------------------------------
+r182 | fkb_159357@163.com | 2015-06-14 01:48:41 CST
+Changed paths:
+	A /1/res/lib/jquery.pjax.min.js
+
+加入pjax
+----------------------------------------------------------------------------
+r181 | fkb_159357@163.com | 2015-06-11 21:32:06 CST
+Changed paths:
+	M /1/core/ext/phone/dwSMS.php
+
+修正dwSMS头部
+----------------------------------------------------------------------------
+r180 | fkb_159357@163.com | 2015-06-10 23:27:03 CST
+Changed paths:
+	M /1/core/config/urlshell.php
+
+ROUTE别名 => 真实ROUTE值，支持任意通配符，不区分大小写，匹配优先级以最小数组索引值为最高。由于存在BUG，禁止在配置左侧时仅使用通配符，如“'<X>' => '<X>/start'”，若有需要，请配置具体的，如'fm'=>'fm/start'
+----------------------------------------------------------------------------
+r179 | fkb_159357@163.com | 2015-06-09 16:53:58 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+----------------------------------------------------------------------------
+r178 | fkb_159357@163.com | 2015-06-09 10:00:01 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+	M /1/core/ext/ApiMerge.php
+
+删除没用代码
+----------------------------------------------------------------------------
+r177 | fkb_159357@163.com | 2015-06-08 20:40:59 CST
+Changed paths:
+	A /1/core/let/test/ping.php
+
+test.ping模拟ping操作
+----------------------------------------------------------------------------
+r176 | fkb_159357@163.com | 2015-06-08 20:38:14 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+----------------------------------------------------------------------------
+r175 | fkb_159357@163.com | 2015-06-08 20:32:53 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+一键封装客户端原始请求，使API更容易合并调用
+----------------------------------------------------------------------------
+r174 | fkb_159357@163.com | 2015-06-08 16:53:04 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+删除没用
+----------------------------------------------------------------------------
+r173 | fkb_159357@163.com | 2015-06-08 16:49:44 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+test/apiMerge
+----------------------------------------------------------------------------
+r172 | fkb_159357@163.com | 2015-06-08 16:46:30 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+1、ApiMergeInvoke::_packParams()正确包装参数表
+2、ApiMergeInvoke::_apisFilter()修正过滤逻辑，允许右侧参数为scalar
+3、ApiMerge::invoke()放宽参数限制，允许第一参数$apis使用string
+----------------------------------------------------------------------------
+r171 | fkb_159357@163.com | 2015-06-08 14:01:34 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+----------------------------------------------------------------------------
+r170 | fkb_159357@163.com | 2015-06-08 13:54:26 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+删除ApiMergeDefine中没用的require和export
+----------------------------------------------------------------------------
+r169 | fkb_159357@163.com | 2015-06-08 13:51:36 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+调整注释：//在重新初始化组合对象ApiMerge时，清空所有静态属性
+----------------------------------------------------------------------------
+r168 | fkb_159357@163.com | 2015-06-08 13:47:17 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+加入ApiMergeInvoke::_apisFilter()，优化ApiMergeInvoke::invoke()
+----------------------------------------------------------------------------
+r167 | fkb_159357@163.com | 2015-06-08 11:11:54 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+import to invoke
+----------------------------------------------------------------------------
+r166 | fkb_159357@163.com | 2015-06-08 10:26:54 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+整理ApiMergeGlue::_init()
+----------------------------------------------------------------------------
+r165 | fkb_159357@163.com | 2015-06-08 03:33:24 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+删除没用代码
+----------------------------------------------------------------------------
+r164 | fkb_159357@163.com | 2015-06-08 03:29:53 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+在重新初始化组合对象ApiMerge时，清空alias属性
+----------------------------------------------------------------------------
+r163 | fkb_159357@163.com | 2015-06-08 03:22:43 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+testcase
+----------------------------------------------------------------------------
+r162 | fkb_159357@163.com | 2015-06-08 03:22:30 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+ApiMerge实现了alias/base
+----------------------------------------------------------------------------
+r161 | fkb_159357@163.com | 2015-06-07 20:25:21 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+删除无用代码
+----------------------------------------------------------------------------
+r160 | fkb_159357@163.com | 2015-06-07 06:38:52 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+----------------------------------------------------------------------------
+r159 | fkb_159357@163.com | 2015-06-07 06:38:43 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+----------------------------------------------------------------------------
+r158 | fkb_159357@163.com | 2015-06-07 06:33:23 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+ApiMerge::import()初步实现
+----------------------------------------------------------------------------
+r157 | fkb_159357@163.com | 2015-06-07 04:10:02 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+简化ApiMerge
+----------------------------------------------------------------------------
+r156 | fkb_159357@163.com | 2015-06-06 16:52:23 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+----------------------------------------------------------------------------
+r155 | fkb_159357@163.com | 2015-06-05 22:36:17 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+test/apiMerge
+----------------------------------------------------------------------------
+r154 | fkb_159357@163.com | 2015-06-05 22:36:00 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+后期静态绑定ApiMergeBase::$pool
+----------------------------------------------------------------------------
+r153 | fkb_159357@163.com | 2015-06-05 21:14:20 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+
+保持原有model的参数结构
+----------------------------------------------------------------------------
+r152 | fkb_159357@163.com | 2015-06-05 20:59:44 CST
+Changed paths:
+	M /1/core/ext/ApiMerge.php
+----------------------------------------------------------------------------
+r151 | fkb_159357@163.com | 2015-06-05 20:41:03 CST
+Changed paths:
+	A /1/core/ext/ApiMerge.php
+
+ApiMerge,用于合并API调用的工具,完成骨架
+----------------------------------------------------------------------------
+r150 | fkb_159357@163.com | 2015-06-05 12:32:53 CST
+Changed paths:
+	M /1/core/ext/xsshtml.class.php
+	M /1/core/ext/libutil/xsshtml.php
+
+xsshtml作者已修复对纯文本自动换行和加p标签包裹的BUG
+----------------------------------------------------------------------------
+r149 | fkb_159357@163.com | 2015-06-02 19:54:47 CST
+Changed paths:
+	A /1/res/lib/gimite-websocket
+	A /1/core/let/test/websocket/client.php
+	A /1/res/lib/gimite-websocket/swfobject.js
+	A /1/res/lib/gimite-websocket/test.html
+	A /1/core/let/test/websocket/server.php
+	A /1/res/lib/gimite-websocket/WebSocketMain.swf
+	A /1/res/lib/gimite-websocket/web_socket.js
+	A /1/core/let/test/websocket
+
+加入兼容性的websocket和测试用例
+----------------------------------------------------------------------------
+r148 | fkb_159357@163.com | 2015-06-02 19:50:29 CST
+Changed paths:
+	A /1/core/ext/phone
+	A /1/core/ext/phone/dwSMS.php
+
+加入dwSMS
+----------------------------------------------------------------------------
+r147 | fkb_159357@163.com | 2015-06-01 04:53:26 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+	A /1/core/ext/store/dwCache.php
+	M /1/core/config/database.php
+	A /1/core/ext/store
+
+加入dwCache扩展，并附带测试用例
+----------------------------------------------------------------------------
+r146 | fkb_159357@163.com | 2015-05-27 01:43:32 CST
+Changed paths:
+	M /1/core/let/test/cbupl.php
+
+格式化代码
+----------------------------------------------------------------------------
+r145 | fkb_159357@163.com | 2015-05-27 01:32:53 CST
+Changed paths:
+	M /1/core/let/test/cbupl.php
+
+优化粘贴传图，给出地址结果
+----------------------------------------------------------------------------
+r144 | fkb_159357@163.com | 2015-05-27 00:53:40 CST
+Changed paths:
+	M /1/core/let/test/cbupl.php
+----------------------------------------------------------------------------
+r143 | fkb_159357@163.com | 2015-05-27 00:49:47 CST
+Changed paths:
+	M /1/core/let/test/cbupl.php
+
+临时图片转移到res/tmp
+----------------------------------------------------------------------------
+r142 | fkb_159357@163.com | 2015-05-27 00:49:31 CST
+Changed paths:
+	A /1/res/tmp
+	A /1/res/tmp/index.html
+
+加入res/tmp
+----------------------------------------------------------------------------
+r141 | fkb_159357@163.com | 2015-05-25 14:56:05 CST
+Changed paths:
+	A /1/core/let/test/cbupl.php
+
+ctrl+v粘贴图片示例，兼容高版本浏览器
+----------------------------------------------------------------------------
+r140 | fkb_159357@163.com | 2015-05-24 13:07:11 CST
+Changed paths:
+	M /1/core/config/database.php
+
+ltre.me剩余最后一个月转移到hostker
+----------------------------------------------------------------------------
+r139 | fkb_159357@163.com | 2015-05-18 15:41:39 CST
+Changed paths:
+	M /1/.idea/workspace.xml
+
+.idea
+----------------------------------------------------------------------------
+r138 | fkb_159357@163.com | 2015-05-18 15:32:54 CST
+Changed paths:
+	A /1/.idea/scopes
+	A /1/.idea/misc.xml
+	A /1/.idea/scopes/scope_settings.xml
+	A /1/.idea/modules.xml
+	A /1/.idea/vcs.xml
+	A /1/.idea/encodings.xml
+	A /1/.idea/larele.iml
+	A /1/.idea/.name
+	A /1/.idea/workspace.xml
+	A /1/.idea
+
+提交idea项目文件
+----------------------------------------------------------------------------
+r137 | fkb_159357@163.com | 2015-05-11 14:01:44 CST
+Changed paths:
+	M /1/core/config/define.php
+----------------------------------------------------------------------------
+r136 | fkb_159357@163.com | 2015-05-11 14:01:09 CST
+Changed paths:
+	M /1/core/config/database.php
+
+对larele.com进行数据库配置
+----------------------------------------------------------------------------
+r135 | fkb_159357@163.com | 2015-05-11 13:49:25 CST
+Changed paths:
+	M /1/core/config/define.php
+
+Hostker主机(Larele)
+----------------------------------------------------------------------------
+r134 | fkb_159357@163.com | 2015-05-11 13:45:50 CST
+Changed paths:
+	A /1/core/setting/larele-20150511-Struct_ImportantData.sql
+	D /1/core/setting/larele-20150418-Struct_ImportantData.sql
+
+数据更新
+----------------------------------------------------------------------------
+r133 | fkb_159357@163.com | 2015-05-04 03:39:36 CST
+Changed paths:
+	M /1/core/base/__route.php
+
+修改注释
+----------------------------------------------------------------------------
+r132 | fkb_159357@163.com | 2015-04-27 01:44:34 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+
+content|edit标题加入title字段
+----------------------------------------------------------------------------
+r131 | fkb_159357@163.com | 2015-04-26 12:53:44 CST
+Changed paths:
+	M /1/core/config/define.php
+
+设置会话名前缀为lr_
+----------------------------------------------------------------------------
+r130 | fkb_159357@163.com | 2015-04-21 10:09:57 CST
+Changed paths:
+	A /1/core/ext/libutil/readme.md
+	M /1/core/ext/libutil/xsshtml.php
+----------------------------------------------------------------------------
+r129 | fkb_159357@163.com | 2015-04-21 10:04:37 CST
+Changed paths:
+	A /1/core/ext/libutil/xsshtml.php
+	A /1/core/ext/libutil
+
+比较完善的XSS过滤器(支持单个或批量)。若传入字符串，则当做单个来处理。
+----------------------------------------------------------------------------
+r128 | fkb_159357@163.com | 2015-04-20 15:52:54 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+修正test/plugin回调的错误URL
+----------------------------------------------------------------------------
+r127 | fkb_159357@163.com | 2015-04-20 15:50:28 CST
+Changed paths:
+	D /1/core/ext/ftp
+	A /1/core/ext/net/AiFtp.php
+
+加入APFTP库
+----------------------------------------------------------------------------
+r126 | fkb_159357@163.com | 2015-04-20 15:50:01 CST
+Changed paths:
+	A /1/core/ext/ftp/AiFtp.php
+	A /1/core/ext/ftp
+
+加入APFTP库
+----------------------------------------------------------------------------
+r125 | fkb_159357@163.com | 2015-04-20 12:54:42 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+
+修复个别情况：编辑发布后，内容或回调链接不正常
+----------------------------------------------------------------------------
+r124 | fkb_159357@163.com | 2015-04-20 10:07:13 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+
+生放送指向miku.us
+----------------------------------------------------------------------------
+r123 | fkb_159357@163.com | 2015-04-20 07:05:45 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+
+修改edit作者身份验证逻辑
+----------------------------------------------------------------------------
+r122 | fkb_159357@163.com | 2015-04-20 06:54:59 CST
+Changed paths:
+	M /1/core/setting/larele-20150418-Struct_ImportantData.sql
+----------------------------------------------------------------------------
+r121 | fkb_159357@163.com | 2015-04-20 06:41:21 CST
+Changed paths:
+	M /1/core/config/const.php
+	M /1/core/filter/Login.filter.php
+	M /1/core/tpl/posts-getlist.html
+	M /1/core/tpl/posts/posts_right.html
+	M /1/core/entity/LoginRuntime.php
+	A /1/core/filter/GlobalLoginInfo.filter.php
+	A /1/core/filter/PostsWrite.filter.php
+	M /1/core/do/Posts.do.php
+	M /1/core/config/filtermap.php
+	M /1/core/tpl/posts/posts_header.html
+
+1、LR_LOGIN_RUMTIME_ME改为LR_RUNTIME_LOGIN_INFO
+2、增加PostsWrite过滤器，生成参数raw_content
+3、加入GlobalLoginInfoFilter全局记录登录信息（不论是否登录）
+4、posts-getlist使用*标记自己发的条目
+5、header显示用户名
+----------------------------------------------------------------------------
+r120 | fkb_159357@163.com | 2015-04-20 05:28:38 CST
+Changed paths:
+	M /1/core/base/__filter.php
+
+DIFilterUtil::execGlobalFilter()【此条没什么意义，还影响实际使用体验，暂时废弃】1、首选如果当前请求的shell等于首选启动指令，则忽略过滤器
+----------------------------------------------------------------------------
+r119 | fkb_159357@163.com | 2015-04-20 04:21:26 CST
+Changed paths:
+	M /1/core/base/__model.php
+
+DIModel将_init()代码转移到__construct中，修复多次使用supertable造成使用错表名的BUG
+----------------------------------------------------------------------------
+r118 | fkb_159357@163.com | 2015-04-20 02:58:58 CST
+Changed paths:
+	D /1/core/ext/xsshtml
+	A /1/core/ext/xsshtml.class.php
+----------------------------------------------------------------------------
+r117 | fkb_159357@163.com | 2015-04-20 01:55:19 CST
+Changed paths:
+	A /1/core/ext/xsshtml/xsshtml.class.php
+	A /1/core/ext/xsshtml/README.txt
+	A /1/core/ext/xsshtml
+
+加入xsshtml库
+----------------------------------------------------------------------------
+r116 | fkb_159357@163.com | 2015-04-20 01:52:51 CST
+Changed paths:
+	M /1/core/setting/tmp.txt
+
+需要写一个强入淡出的toast代替alert()
+----------------------------------------------------------------------------
+r115 | fkb_159357@163.com | 2015-04-20 00:31:57 CST
+Changed paths:
+	A /1/core/setting/tmp.txt
+
+Posts需要添加字段：标记删除，可见性（对所有人可见、仅对作者可见、权限值可见(该项目可与前两者并存，需要考虑如何设计)）
+----------------------------------------------------------------------------
+r114 | fkb_159357@163.com | 2015-04-19 22:49:07 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+调整test/plugin输入框大小
+----------------------------------------------------------------------------
+r113 | fkb_159357@163.com | 2015-04-19 22:18:23 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+test/plugin操作成功后，回调原页面。修改插件表单界面容纳度
+----------------------------------------------------------------------------
+r112 | fkb_159357@163.com | 2015-04-19 22:03:32 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+test/plugin统一在core/let/testplugins目录中创建插件
+----------------------------------------------------------------------------
+r111 | fkb_159357@163.com | 2015-04-19 21:58:56 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_widgets.html
+	M /1/core/base/__let.php
+
+let()防止创建过目录后无法再在其中创建插件
+----------------------------------------------------------------------------
+r110 | fkb_159357@163.com | 2015-04-19 21:33:30 CST
+Changed paths:
+	M /1/core/base/__let.php
+
+修改无法在let目录第一层无法创建插件的BUG
+----------------------------------------------------------------------------
+r109 | fkb_159357@163.com | 2015-04-19 16:08:52 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+----------------------------------------------------------------------------
+r108 | fkb_159357@163.com | 2015-04-19 16:04:08 CST
+Changed paths:
+	A /1/core/entity/Rooter.php
+
+增加Rooter.php
+----------------------------------------------------------------------------
+r107 | fkb_159357@163.com | 2015-04-19 16:03:48 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+测试插件生成：完善权限验证
+----------------------------------------------------------------------------
+r106 | fkb_159357@163.com | 2015-04-19 15:40:50 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+
+test/plugin测试插件生成
+----------------------------------------------------------------------------
+r105 | fkb_159357@163.com | 2015-04-19 15:31:17 CST
+Changed paths:
+	M /1/core/base/__let.php
+
+let()生成插件支持文件夹嵌套创建
+----------------------------------------------------------------------------
+r104 | fkb_159357@163.com | 2015-04-19 14:19:41 CST
+Changed paths:
+	M /1/core/base/__lib.php
+	M /1/core/do/User.do.php
+
+1、url()接到空串参数时，返回“./”
+2、UserDo::loginView()指定成功回调去向：当前路由且非登录视图
+----------------------------------------------------------------------------
+r103 | fkb_159357@163.com | 2015-04-19 14:03:17 CST
+Changed paths:
+	M /1/core/tpl/user-regview.php
+	M /1/core/entity/LoginRuntime.php
+	M /1/core/do/User.do.php
+	M /1/core/tpl/user-loginview.php
+
+登录逻辑加入回调支持。
+----------------------------------------------------------------------------
+r102 | fkb_159357@163.com | 2015-04-19 03:44:36 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+----------------------------------------------------------------------------
+r101 | fkb_159357@163.com | 2015-04-19 03:44:19 CST
+Changed paths:
+	M /1/core/config/urlshell.php
+
+调整别名规则posts/p<X>的位置
+----------------------------------------------------------------------------
+r100 | fkb_159357@163.com | 2015-04-19 03:26:29 CST
+Changed paths:
+	M /1/core/ext/bootstrap.php
+	M /1/core/base/__tpl.php
+	M /1/core/tpl/posts-getlist.html
+	M /1/core/do/Posts.do.php
+
+注册spte分页标签
+----------------------------------------------------------------------------
+r99 | fkb_159357@163.com | 2015-04-19 03:20:16 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+----------------------------------------------------------------------------
+r98 | fkb_159357@163.com | 2015-04-19 03:18:45 CST
+Changed paths:
+	M /1/core/base/__tpl.php
+	M /1/core/ext/bootstrap.php
+	M /1/core/config/urlshell.php
+	M /1/core/tpl/posts-getlist.html
+	M /1/core/do/Posts.do.php
+
+加入bootstrap3分页函数，注册spte3到smarty标签。
+完成posts分页
+----------------------------------------------------------------------------
+r97 | fkb_159357@163.com | 2015-04-19 01:19:29 CST
+Changed paths:
+	M /1/core/config/database.php
+	M /1/core/config/define.php
+
+配置域名ltre.me
+----------------------------------------------------------------------------
+r96 | fkb_159357@163.com | 2015-04-19 01:10:29 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+	M /1/core/setting/larele-20150418-Struct_ImportantData.sql
+	M /1/core/do/Posts.do.php
+
+新发表的，排序值默认为零，排最前，其他值：越小越靠前。
+相同排序值的，越晚发布，越靠前
+一般对于不注重顺序的条目，可设置其为999或99，需要排序的条目从1开始设置。
+----------------------------------------------------------------------------
+r95 | fkb_159357@163.com | 2015-04-18 22:48:19 CST
+Changed paths:
+	M /1/core/config/rewrite.php
+	A /1/core/let/test/tiles.php
+	A /1/core/let/test/clock.php
+	A /1/core/let/test
+	A /1/core/let/test/linenet.php
+	M /1/core/base/__route.php
+	M /1/core/config/urlshell.php
+
+1、优化DIRoute::tranAlias()，防止没配置别名规则时出错。
+2、首页调整为posts/getlist
+3、恢复部分测试代码(let/test)
+----------------------------------------------------------------------------
+r94 | fkb_159357@163.com | 2015-04-18 22:07:46 CST
+Changed paths:
+	M /1/core/do/User.do.php
+	M /1/core/config/const.php
+	A /1/core/entity/LoginRuntime.php
+	M /1/core/do/Posts.do.php
+	M /1/core/config/filtermap.php
+	A /1/core/filter/Login.filter.php
+
+加入LoginFilter，统一对需要登录的代码进行控制，登录态存储到LoginRuntime。登录态的获取可以到XxxDo::init()中进行，并存入一个临时成员(例如$this->me)中，供各个func()使用。
+----------------------------------------------------------------------------
+r93 | fkb_159357@163.com | 2015-04-18 21:16:52 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_footer.html
+	M /1/core/tpl/posts/posts_layout.html
+	M /1/res/biz/posts/posts.css
+	A /1/core/tpl/posts/posts_widgets.html
+	M /1/res/biz/posts/posts.js
+
+增加posts_widgets，放置加号按钮
+
+----------------------------------------------------------------------------
+r92 | fkb_159357@163.com | 2015-04-18 18:09:31 CST
+Changed paths:
+	M /1/core/let/shell/shell.php
+
+取消shell console自动歌曲播放
+----------------------------------------------------------------------------
+r91 | fkb_159357@163.com | 2015-04-18 18:06:08 CST
+Changed paths:
+	A /1/core/setting/larele-20150418-Struct_ImportantData.sql
+	D /1/core/setting/larele-20150418-结构+重要基础数据.sql
+----------------------------------------------------------------------------
+r90 | fkb_159357@163.com | 2015-04-18 18:05:22 CST
+Changed paths:
+	M /1/core/setting/larele-20150418-结构+重要基础数据.sql
+----------------------------------------------------------------------------
+r89 | fkb_159357@163.com | 2015-04-18 17:59:58 CST
+Changed paths:
+	A /1/core/tpl/testtest-testtpl.php
+	A /1/core/inject/Test.inject.php
+	M /1/core/do/Posts.do.php
+	A /1/core/tpl/testtest-tpl.php
+	A /1/core/tpl/testtest-stpl.html
+	A /1/core/tpl/testtest-teststpl.html
+	M /1/core/tpl/posts-edit.html
+	D /1/core/setting/larele.sql
+	M /1/res/biz/posts/posts.js
+	A /1/core/do/Testtest.do.php
+	A /1/core/entity/Test.php
+	M /1/core/tpl/posts-pub.html
+	A /1/core/setting/larele-20150418-结构+重要基础数据.sql
+
+1、Posts增加排序值
+2、回复testtest实验代码
+3、SQL导出重要基础数据
+----------------------------------------------------------------------------
+r88 | fkb_159357@163.com | 2015-04-18 16:45:19 CST
+Changed paths:
+	M /1/res/biz/posts/posts.js
+
+底部横排推荐图是用懒加载解决离线环境没有图导致样式异常问题
+----------------------------------------------------------------------------
+r87 | fkb_159357@163.com | 2015-04-18 16:25:10 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+
+修改header文案
+----------------------------------------------------------------------------
+r86 | fkb_159357@163.com | 2015-04-18 16:24:36 CST
+Changed paths:
+	M /1/core/let/shell/shell.php
+
+shell console 支持缩放参数rate
+----------------------------------------------------------------------------
+r85 | fkb_159357@163.com | 2015-04-18 05:43:23 CST
+Changed paths:
+	A /1/res/biz/other/jinguanyu.js
+
+加密金馆鱼
+----------------------------------------------------------------------------
+r84 | fkb_159357@163.com | 2015-04-18 05:41:24 CST
+Changed paths:
+	A /1/res/biz/other/jinguanyu.gif
+	A /1/res/biz/other
+	A /1/res/biz/other/jinguanyu.src.js
+
+加入金馆鱼支持
+----------------------------------------------------------------------------
+r83 | fkb_159357@163.com | 2015-04-18 05:41:06 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+----------------------------------------------------------------------------
+r82 | fkb_159357@163.com | 2015-04-18 05:22:38 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+	M /1/core/tpl/posts/posts_header.html
+	M /1/core/tpl/posts-getlist.html
+	M /1/res/biz/posts/posts.css
+
+完成posts-content和样式调整
+header链接
+----------------------------------------------------------------------------
+r81 | fkb_159357@163.com | 2015-04-18 04:33:18 CST
+Changed paths:
+	M /1/core/base/__tpl.php
+
+取消smarty默认eacape:html
+----------------------------------------------------------------------------
+r80 | fkb_159357@163.com | 2015-04-18 04:24:47 CST
+Changed paths:
+	M /1/core/base/__tpl.php
+
+恢复$_smarty原代码
+----------------------------------------------------------------------------
+r79 | fkb_159357@163.com | 2015-04-18 04:17:31 CST
+Changed paths:
+	M /1/core/base/__tpl.php
+
+DITpl::$_smarty改为public，供DIDo子类使用
+----------------------------------------------------------------------------
+r78 | fkb_159357@163.com | 2015-04-18 04:15:12 CST
+Changed paths:
+	M /1/core/base/__tpl.php
+
+DITpl::$_smarty改为protected，供DIDo子类使用
+----------------------------------------------------------------------------
+r77 | fkb_159357@163.com | 2015-04-18 03:51:55 CST
+Changed paths:
+	M /1/core/tpl/posts-pub.html
+	M /1/core/config/urlshell.php
+	A /1/core/tpl/posts-edit.html
+	M /1/core/do/Posts.do.php
+	M /1/core/tpl/posts-content.html
+
+完成Posts:content+pub+edit
+----------------------------------------------------------------------------
+r76 | fkb_159357@163.com | 2015-04-18 03:50:57 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+
+头部导航：加入列表，反应堆(待开发功能)，查水表（搜索）
+----------------------------------------------------------------------------
+r75 | fkb_159357@163.com | 2015-04-18 03:15:44 CST
+Changed paths:
+	M /1/core/base/__lib.php
+
+putalert()参数优化
+----------------------------------------------------------------------------
+r74 | fkb_159357@163.com | 2015-04-18 02:24:17 CST
+Changed paths:
+	M /1/core/setting/larele.sql
+
+posts增加字段urlalia
+----------------------------------------------------------------------------
+r73 | fkb_159357@163.com | 2015-04-17 22:13:38 CST
+Changed paths:
+	M /1/core/base/__route.php
+
+DIRoute::getShell()方法中，取得的原始shell去除右侧的“/”
+----------------------------------------------------------------------------
+r72 | fkb_159357@163.com | 2015-04-15 13:09:45 CST
+Changed paths:
+	M /1/core/base/__lib.php
+
+url()采用“./”前缀
+----------------------------------------------------------------------------
+r71 | fkb_159357@163.com | 2015-04-15 13:03:07 CST
+Changed paths:
+	D /1/core/data/log
+	D /1/core/data/cache
+	A /1/core/data/index.html
+	M /1/core/data
+----------------------------------------------------------------------------
+r70 | fkb_159357@163.com | 2015-04-15 13:02:14 CST
+Changed paths:
+	A /1/core/data/log/index.html
+	R /1/core/data
+	A /1/core/data/log
+	A /1/core/data/cache/index.html
+	M /1/core
+	A /1/core/data/cache
+----------------------------------------------------------------------------
+r69 | fkb_159357@163.com | 2015-04-15 10:40:27 CST
+Changed paths:
+	M /1/core/base/__exception.php
+	M /1/core/base/__init.php
+
+取消全局DIError监控
+----------------------------------------------------------------------------
+r68 | fkb_159357@163.com | 2015-04-15 03:56:20 CST
+Changed paths:
+	A /1/core/entity/User.php
+	A /1/core/tpl/user-regview.php
+	A /1/core/tpl/user-loginview.php
+	M /1/core/do/Posts.do.php
+	M /1/core/config/const.php
+	A /1/core/entity/Util.php
+	A /1/core/do/User.do.php
+
+加入用户注册登录模块
+----------------------------------------------------------------------------
+r67 | fkb_159357@163.com | 2015-04-15 03:30:56 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+----------------------------------------------------------------------------
+r66 | fkb_159357@163.com | 2015-04-15 03:26:39 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_header.html
+	M /1/core/tpl/posts/posts_layout.html
+
+固定导航栏，调整顶部留白
+----------------------------------------------------------------------------
+r65 | fkb_159357@163.com | 2015-04-15 03:24:10 CST
+Changed paths:
+	M /1/core/config/rewrite.php
+	M /1/core/tpl/posts/posts_layout.html
+	M /1/res/biz/posts/posts.css
+	M /1/core/tpl/posts/posts_header.html
+	M /1/core/config/urlshell.php
+
+1、别名规则：'posts/pub' => 'posts/pub',
+2、调整底部横排推荐图的代码位置
+3、加入posts_header代码
+4、调整footer颜色强度
+----------------------------------------------------------------------------
+r64 | fkb_159357@163.com | 2015-04-15 02:28:58 CST
+Changed paths:
+	M /1/core/base/__init.php
+	M /1/core/base/__exception.php
+
+1、增加setIgnoreErrors(),可以设置忽略的错误类型。
+2、可以使用beginTrace()和endTrace()来选定抓错的区域
+----------------------------------------------------------------------------
+r63 | fkb_159357@163.com | 2015-04-14 22:26:51 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+	M /1/core/tpl/posts/posts_footer.html
+	M /1/res/biz/posts/posts.css
+	M /1/core/tpl/posts/posts_header.html
+
+调整footer和header
+----------------------------------------------------------------------------
+r62 | fkb_159357@163.com | 2015-04-14 14:57:16 CST
+Changed paths:
+	A /1/.settings/org.eclipse.php.core.prefs
+
+eclipse.preferences.version=1
+include_path=
+----------------------------------------------------------------------------
+r61 | fkb_159357@163.com | 2015-04-14 04:29:08 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+
+修正模板输出大小写
+----------------------------------------------------------------------------
+r60 | fkb_159357@163.com | 2015-04-14 00:16:45 CST
+Changed paths:
+	M /1/core/config/urlshell.php
+
+调整别名规则'<D>/<F>' => '<D>/<F>'的位置
+----------------------------------------------------------------------------
+r59 | fkb_159357@163.com | 2015-04-13 22:35:23 CST
+Changed paths:
+	M /1/core/tpl/posts-pub.html
+
+posts-pub
+----------------------------------------------------------------------------
+r58 | fkb_159357@163.com | 2015-04-13 22:18:12 CST
+Changed paths:
+	M /1/core/config/urlshell.php
+	A /1/core/tpl/posts-pub.html
+	M /1/core/do/Posts.do.php
+
+加入posts-pub
+----------------------------------------------------------------------------
+r57 | fkb_159357@163.com | 2015-04-13 21:53:25 CST
+Changed paths:
+	M /1/core/config/rewrite.php
+	M /1/core/base/__route.php
+
+路由重写增加<any>标签支持，表示任意占位符
+----------------------------------------------------------------------------
+r56 | fkb_159357@163.com | 2015-04-13 21:35:35 CST
+Changed paths:
+	M /1/core/base/__route.php
+
+删除DIRoute::tranAlias()多余代码
+----------------------------------------------------------------------------
+r55 | fkb_159357@163.com | 2015-04-13 21:26:04 CST
+Changed paths:
+	M /1/core/config/rewrite.php
+	A /1/core/tpl/posts/posts_footer.html
+	M /1/core/tpl/posts/posts_layout.html
+
+如果设置了别名规则，并且想使用路由重写规则，则需要rewrite和alias有机配合
+----------------------------------------------------------------------------
+r54 | fkb_159357@163.com | 2015-04-13 20:59:01 CST
+Changed paths:
+	M /1/core/tpl/posts-content.html
+	M /1/core/tpl/posts-getlist.html
+	A /1/res/biz/posts/posts.js
+	M /1/core/tpl/posts/posts_bottom_recommend.html
+	M /1/core/tpl/posts/posts_layout.html
+
+全部js转移至posts.js
+----------------------------------------------------------------------------
+r53 | fkb_159357@163.com | 2015-04-13 14:39:41 CST
+Changed paths:
+	M /1/core/tpl/posts-getlist.html
+	M /1/res/biz/posts/posts.css
+
+posts列表为空时留白
+----------------------------------------------------------------------------
+r52 | fkb_159357@163.com | 2015-04-13 06:37:50 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+	A /1/core/tpl/posts/posts_header.html
+	M /1/res/biz/posts/posts.css
+
+准备加入header
+----------------------------------------------------------------------------
+r51 | fkb_159357@163.com | 2015-04-13 06:30:47 CST
+Changed paths:
+	M /1/res/biz/posts/posts.css
+	M /1/core/tpl/posts/posts_bottom_recommend.html
+
+底部横排推荐随机色背景
+footer背景
+----------------------------------------------------------------------------
+r50 | fkb_159357@163.com | 2015-04-13 05:57:17 CST
+Changed paths:
+	M /1/core/tpl/posts/posts_layout.html
+	M /1/res/biz/posts/posts.css
+----------------------------------------------------------------------------
+r49 | fkb_159357@163.com | 2015-04-13 05:50:11 CST
+Changed paths:
+	A /1/core/tpl/posts/posts_layout.html
+	M /1/core/tpl/posts-content.html
+	M /1/core/do/Posts.do.php
+	M /1/res/biz/posts/posts.css
+	A /1/core/tpl/posts/posts_bottom_recommend.html
+	D /1/core/tpl/posts_layout.html
+	A /1/core/tpl/posts
+	D /1/core/tpl/posts_right.html
+	A /1/core/tpl/posts/posts_right.html
+
+固定右侧，加入底部横排推荐
+----------------------------------------------------------------------------
+r48 | fkb_159357@163.com | 2015-04-13 03:45:54 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r47 | fkb_159357@163.com | 2015-04-13 02:27:18 CST
+Changed paths:
+	M /1/core/tpl/posts_right.html
+----------------------------------------------------------------------------
+r46 | fkb_159357@163.com | 2015-04-13 02:23:36 CST
+Changed paths:
+	M /1/core/tpl/posts-getlist.html
+
+posts列表
+----------------------------------------------------------------------------
+r45 | fkb_159357@163.com | 2015-04-13 02:11:52 CST
+Changed paths:
+	M /1/core/config/urlshell.php
+
+修改ROUTE别名规则顺序
+----------------------------------------------------------------------------
+r44 | fkb_159357@163.com | 2015-04-13 02:10:44 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+	M /1/core/tpl/posts-getlist.html
+
+输出posts列表
+----------------------------------------------------------------------------
+r43 | fkb_159357@163.com | 2015-04-13 02:03:49 CST
+Changed paths:
+	M /1/core/setting/larele.sql
+----------------------------------------------------------------------------
+r42 | fkb_159357@163.com | 2015-04-13 01:52:50 CST
+Changed paths:
+	A /1/core/setting/larele.sql
+----------------------------------------------------------------------------
+r41 | fkb_159357@163.com | 2015-04-13 01:47:06 CST
+Changed paths:
+	M /1/core/tpl/posts-content.html
+	M /1/core/tpl/posts_right.html
+----------------------------------------------------------------------------
+r40 | fkb_159357@163.com | 2015-04-13 01:33:04 CST
+Changed paths:
+	M /1/core/tpl/larele-stpl.html
+----------------------------------------------------------------------------
+r39 | fkb_159357@163.com | 2015-04-13 01:30:35 CST
+Changed paths:
+	M /1/core/config/urlshell.php
+	M /1/core/do/Posts.do.php
+	M /1/core/tpl/posts-getlist.html
+
+设置文章详细页链接映射
+----------------------------------------------------------------------------
+r38 | fkb_159357@163.com | 2015-04-13 01:24:17 CST
+Changed paths:
+	M /1/core/tpl/posts-getlist.html
+	M /1/core/do/Posts.do.php
+----------------------------------------------------------------------------
+r37 | fkb_159357@163.com | 2015-04-13 01:17:28 CST
+Changed paths:
+	M /1/core/base/__init.php
+	M /1/core/base/__exception.php
+
+1、优化异常日志
+2、增肌DIError，错误捕捉类(仅在非调试模式触发)，目前除了E_ERROR以外，应该都可以捕捉
+3、__init.php增加全局错误捕捉代码
+----------------------------------------------------------------------------
+r36 | fkb_159357@163.com | 2015-04-13 01:15:33 CST
+Changed paths:
+	M /1/core/config/define.php
+
+配置SMARTY左右标签
+----------------------------------------------------------------------------
+r35 | fkb_159357@163.com | 2015-04-13 01:14:49 CST
+Changed paths:
+	M /1/core/tpl/posts-getlist.html
+	M /1/core/do/Posts.do.php
+	M /1/core/tpl/posts_layout.html
+	A /1/core/tpl/posts-content.html
+
+设置posts通用标题
+----------------------------------------------------------------------------
+r34 | fkb_159357@163.com | 2015-04-13 01:13:49 CST
+Changed paths:
+	A /1/res/lib/video-js/video.js
+	A /1/res/lib/video-js/demo.captions.vtt
+	A /1/res/lib/video-js/video-js.css
+	A /1/res/lib/video-js
+	A /1/res/lib/video-js/video-js.min.css
+	A /1/res/lib/video-js/video.dev.js
+	A /1/res/lib/video-js/font
+	A /1/res/lib/video-js/demo.html
+	A /1/res/lib/video-js/font/vjs.svg
+	A /1/res/lib/video-js/font/vjs.ttf
+	A /1/res/lib/video-js/video-js.swf
+	A /1/res/lib/video-js/font/vjs.eot
+	A /1/res/lib/video-js/font/vjs.woff
+
+增加video-js库
+----------------------------------------------------------------------------
+r33 | fkb_159357@163.com | 2015-04-12 13:46:44 CST
+Changed paths:
+	M /1/core/tpl/test-stemplate.html
+	M /1/core/tpl/test-template.html
+	M /1/core/tpl/larele-stpl.html
+	M /1/core/tpl/test-else.html
+
+示例模板
+----------------------------------------------------------------------------
+r32 | fkb_159357@163.com | 2015-04-12 13:42:31 CST
+Changed paths:
+	M /1/core/base/__tpl.php
+	M /1/core/base/__env.php
+	M /1/core/tpl/posts-getlist.html
+	M /1/core/tpl/posts_layout.html
+
+Smarty标签定界符配置
+----------------------------------------------------------------------------
+r31 | fkb_159357@163.com | 2015-04-12 13:21:38 CST
+Changed paths:
+	M /1/core/base/__route.php
+	M /1/core/config/urlshell.php
+
+兼容类似这样的规则并存，并不强制要求顺序：
+'posts' => 'posts/getlist',
+            'posts/<A>/<B>' => 'posts/getlist/<A>/<B>',
+----------------------------------------------------------------------------
+r30 | fkb_159357@163.com | 2015-04-12 12:32:20 CST
+Changed paths:
+	M /1/core/tpl/posts_layout.html
+	M /1/core/tpl/posts-getlist.html
+----------------------------------------------------------------------------
+r29 | fkb_159357@163.com | 2015-04-12 12:22:26 CST
+Changed paths:
+	M /1/core/do/Posts.do.php
+	A /1/res/biz/posts/posts.css
+	A /1/core/tpl/posts_right.html
+	M /1/core/tpl/posts-getlist.html
+	A /1/res/lib/lib.css
+	M /1/core/tpl/posts_layout.html
+	A /1/res/biz/posts
+
+POSTS布局
+----------------------------------------------------------------------------
+r28 | fkb_159357@163.com | 2015-04-12 12:21:25 CST
+Changed paths:
+	A /1/.settings/org.eclipse.wst.jsdt.ui.superType.name
+	A /1/.settings/.jsdtscope
+	A /1/.settings
+	M /1/.project
+	A /1/.settings/org.eclipse.wst.jsdt.ui.superType.container
+
+IDE加入jsdt支持
+----------------------------------------------------------------------------
+r27 | fkb_159357@163.com | 2015-04-12 10:56:30 CST
+Changed paths:
+	A /1/core/do/Posts.do.php
+	A /1/core/tpl/posts-getlist.html
+	M /1/core/base/__do.php
+	A /1/core/tpl/posts_layout.html
+
+__do.php加入_init()
+加入Posts实验
+----------------------------------------------------------------------------
+r26 | fkb_159357@163.com | 2015-04-12 01:22:04 CST
+Changed paths:
+	M /1/core/do/Test.do.php
+----------------------------------------------------------------------------
+r25 | fkb_159357@163.com | 2015-04-12 01:18:23 CST
+Changed paths:
+	M /1/core/base/__route.php
+	M /1/core/config/urlshell.php
+
+ROUTE别名 => 真实ROUTE值，支持任意通配符，不区分大小写，匹配优先级以最小数组索引值为最高。
+增加DIRoute::tranAlias()以支持路由别名
+----------------------------------------------------------------------------
+r24 | fkb_159357@163.com | 2015-04-11 22:27:01 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+
+test.tiles预加载接口优化
+----------------------------------------------------------------------------
+r23 | fkb_159357@163.com | 2015-04-11 03:00:39 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r22 | fkb_159357@163.com | 2015-04-11 01:39:46 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r21 | fkb_159357@163.com | 2015-04-11 01:25:55 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r20 | fkb_159357@163.com | 2015-04-11 01:05:58 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r19 | fkb_159357@163.com | 2015-04-10 04:02:31 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r18 | fkb_159357@163.com | 2015-04-10 04:00:29 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+	M /1/core/tpl/larele-stpl.html
+----------------------------------------------------------------------------
+r17 | fkb_159357@163.com | 2015-04-10 03:56:36 CST
+Changed paths:
+	M /1/core/tpl/larele-start.html
+----------------------------------------------------------------------------
+r16 | fkb_159357@163.com | 2015-04-10 03:56:14 CST
+Changed paths:
+	M /1/core/tpl/larele-stpl.html
+----------------------------------------------------------------------------
+r15 | fkb_159357@163.com | 2015-04-10 03:54:37 CST
+Changed paths:
+	M /1/core/do/Larele.do.php
+----------------------------------------------------------------------------
+r14 | fkb_159357@163.com | 2015-04-10 03:54:17 CST
+Changed paths:
+	M /1/core/do/Larele.do.php
+----------------------------------------------------------------------------
+r13 | fkb_159357@163.com | 2015-04-10 03:50:37 CST
+Changed paths:
+	M /1/core/data
+	D /1/core/data/cache
+	D /1/core/data/log
+----------------------------------------------------------------------------
+r12 | fkb_159357@163.com | 2015-04-10 03:49:27 CST
+Changed paths:
+	A /1/core/data/cache/index.html
+	A /1/core/data/index.html
+	D /1/core/data/cache/abfbbcb6a92f6ec7ddd95a9722734afbc1f16b3c.file.larele-start.html.php
+	A /1/core/data/log/index.html
+	A /1/core/data/log
+	D /1/core/data/cache/6a2885ae3e71b4f8ceb9bfc0b39b63196627d36d.file.larele-stpl.html.php
+----------------------------------------------------------------------------
+r11 | fkb_159357@163.com | 2015-04-10 03:48:07 CST
+Changed paths:
+	A /1/core/tpl/larele-start.html
+	M /1/core/tpl/larele-stpl.html
+	M /1/core
+	R /1/core/data
+	A /1/core/data/cache/6a2885ae3e71b4f8ceb9bfc0b39b63196627d36d.file.larele-stpl.html.php
+	A /1/core/data/cache/abfbbcb6a92f6ec7ddd95a9722734afbc1f16b3c.file.larele-start.html.php
+	A /1/core/data/cache
+----------------------------------------------------------------------------
+r10 | fkb_159357@163.com | 2015-04-10 03:44:20 CST
+Changed paths:
+	M /1/core/do/Template.do.php
+----------------------------------------------------------------------------
+r9 | fkb_159357@163.com | 2015-04-10 03:41:45 CST
+Changed paths:
+	M /1/core/do/Template.do.php
+
+修改注释
+----------------------------------------------------------------------------
+r8 | fkb_159357@163.com | 2015-04-10 03:38:57 CST
+Changed paths:
+	M /1/core/do/Template.do.php
+----------------------------------------------------------------------------
+r7 | fkb_159357@163.com | 2015-04-10 03:36:24 CST
+Changed paths:
+	M /1/core/tpl/larele-stpl.html
+	M /1/core/do/Larele.do.php
+----------------------------------------------------------------------------
+r6 | fkb_159357@163.com | 2015-04-10 03:33:55 CST
+Changed paths:
+	A /1/core/tpl/larele-stpl.html
+	A /1/.buildpath
+	M /1/core/do/Larele.do.php
+	M /1/.project
+----------------------------------------------------------------------------
+r5 | fkb_159357@163.com | 2015-04-10 03:25:27 CST
+Changed paths:
+	M /1/core/config/database.php
+----------------------------------------------------------------------------
+r4 | fkb_159357@163.com | 2015-04-10 03:22:12 CST
+Changed paths:
+	A /1/core/setting/create_user.sql
+
+创建larele用户
+----------------------------------------------------------------------------
+r3 | fkb_159357@163.com | 2015-04-10 03:12:16 CST
+Changed paths:
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/LessThan.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Response.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Digits.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Ip.php
+	A /1/core/filter
+	A /1/core/base/__entity.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Uri.php
+	A /1/core/base/__filter.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/InArray.php
+	A /1/core/ext/phpQuery/phpQuery/DOMDocumentWrapper.php
+	A /1/core/tpl/test-else.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.escape.php
+	A /1/res/lib/bootstarp-material-design/fonts/LICENSE.txt
+	A /1/res/lib/bootstarp-material-design/css/ripples.css.map
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/Count.php
+	A /1/core/ext/phpQuery/phpQuery/phpQueryEvents.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Barcode/Ean13.php
+	A /1/res/lib/jquery.min.map
+	A /1/core/config/const.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client/Exception.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.count_words.php
+	A /1/res/lib/bootstrap3/js
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname.php
+	A /1/core/ext/smarty/plugins/function.counter.php
+	A /1/core/ext/smarty/plugins/modifier.debug_print_var.php
+	A /1/res/index.html
+	A /1/res/lib
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Exception.php
+	A /1/core/entity
+	A /1/core/inject/index.html
+	A /1/core/ext/smarty/plugins/block.textformat.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_include.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.default.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Json/Encoder.php
+	A /1/res/lib/bootstrap3/css/bootstrap-theme.min.css
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client/Adapter/Exception.php
+	A /1/core/setting
+	A /1/core/ext/smarty/index.html
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http
+	A /1/core/ext/smarty/sysplugins/smarty_internal_resource_extends.php
+	A /1/core/ext/smarty/plugins/modifier.truncate.php
+	A /1/core/do/index.html
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/Exists.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Barcode
+	A /1/core/config
+	A /1/core/ext/smarty/sysplugins/smarty_internal_write_file.php
+	A /1/core/ext/smarty/sysplugins
+	A /1/res/lib/bootstrap3
+	A /1/core/let/shell
+	A /1/core/let/index.html
+	A /1/res/lib/html5shiv.js
+	A /1/res/lib/bootstarp-material-design/js/ripples.js
+	A /1/core/ext/smarty/plugins/modifier.date_format.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client.php
+	A /1/core/service/index.html
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Between.php
+	A /1/core/ext/smarty/debug.tpl
+	A /1/core/ext/smarty/sysplugins/smarty_internal_utility.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_function_plugin.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Registry.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_parsetree.php
+	A /1/core/index.html
+	A /1/res/lib/bootstrap3/css/bootstrap.css.map
+	A /1/core/ext/bootstrap.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.string_format.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_resource_eval.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/EmailAddress.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_include_php.php
+	A /1/core/ext/smarty/sysplugins/smarty_cacheresource.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.count_characters.php
+	A /1/core/setting/index.html
+	A /1/core/ext/smarty/plugins/function.fetch.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Exception.php
+	A /1/res/biz/shell/shell.rar
+	A /1/core/ext/phpQuery/phpQuery/compat/mbstring.php
+	A /1/core/data/cache
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Date.php
+	A /1/core/ext/smarty/sysplugins/smarty_resource.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/StringLength.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_capture.php
+	A /1/core/ext/smarty/sysplugins/smarty_cacheresource_keyvaluestore.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_append.php
+	A /1/res/lib/bootstrap3/fonts/glyphicons-halflings-regular.ttf
+	A /1/core/ext/smarty/sysplugins/smarty_security.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_modifier.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/Upload.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Float.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Loader.php
+	A /1/res/lib/bootstrap3/fonts/glyphicons-halflings-regular.woff2
+	A /1/core/model
+	A /1/core/ext/index.html
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/De.php
+	A /1/res/lib/bootstarp-material-design/css/material-wfont.css.map
+	A /1/core/entity/index.html
+	A /1/core/config/filtermap.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_resource_stream.php
+	A /1/core/ext/phpQuery/phpQuery/plugins/example.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_template.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Uri/Exception.php
+	A /1/core/ext/smarty/sysplugins/smarty_cacheresource_custom.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_call.php
+	A /1/core/base/__exception.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_for.php
+	M /1/index.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_insert.php
+	A /1/core/let/shell/index.html
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/NotEmpty.php
+	A /1/res/lib/bootstrap3/css
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client/Adapter/Interface.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Uri/Http.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client/Adapter/Test.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_nocache.php
+	A /1/res/lib/bootstarp-material-design/fonts/Material-Design-Icons.eot
+	A /1/res/biz/shell/di-logo-large.png
+	A /1/core/data
+	A /1/core/let
+	A /1/res
+	A /1/res/lib/bootstarp-material-design/css/ripples.min.css
+	A /1/res/lib/underscore-1.7-min.js
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_block.php
+	A /1/core/ext/smarty/plugins/outputfilter.trimwhitespace.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_object_block_function.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.from_charset.php
+	A /1/res/biz/shell/shell.css
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/At.php
+	A /1/core/ext/smarty/plugins/modifier.escape.php
+	A /1/res/biz/shell/index.html
+	A /1/core/ext/phpQuery/phpQuery/Zend/Json/Decoder.php
+	A /1/core/tpl/503.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_print_expression.php
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts/google_login.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_templatebase.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_function_call_handler.php
+	A /1/core/tpl/test-else.html
+	A /1/core/ext/smarty/sysplugins/smarty_internal_resource_php.php
+	A /1/core/ext/smarty/plugins/modifier.regex_replace.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.upper.php
+	A /1/core/ext/smarty/plugins/shared.escape_special_chars.php
+	A /1/core/tpl/index.html
+	A /1/core/let/shell/shell-css.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_rdelim.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Exception.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Alpha.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/Fi.php
+	A /1/core/ext/smarty/plugins/shared.mb_str_replace.php
+	A /1/core/ext/phpQuery/phpQuery.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.count_sentences.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hex.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_assign.php
+	A /1/core/tpl/_layout.php
+	A /1/core/ext/phpQuery/phpQuery/phpQueryObject.php
+	A /1/core/base/__lib.php
+	A /1/core/base/__init.php
+	A /1/core/do/Test.do.php
+	A /1/res/lib/respond.min.js
+	A /1/core/ext/smarty/plugins/function.math.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_debug.php
+	A /1/core/filter/index.html
+	A /1/core/ext/smarty/plugins/function.html_checkboxes.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_config.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client/Adapter/Socket.php
+	A /1/core/ext/smarty/sysplugins/smarty_config_source.php
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts/print_source.php
+	A /1/core/base/__base.php
+	A /1/core/ext/phpQuery/phpQuery/plugins
+	A /1/core/ext/phpQuery/phpQuery/compat
+	A /1/core/ext/net/dwHttp.php
+	A /1/core/ext/smarty/plugins/modifier.replace.php
+	A /1/core/config/urlshell.php
+	A /1/core/ext/smarty/plugins/function.html_select_date.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Json
+	A /1/core/ext/phpQuery/phpQuery
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_setfilter.php
+	A /1/core/config/define.php
+	A /1/core/do
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Regex.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_continue.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/Extension.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compilebase.php
+	A /1/res/lib/jquery-1.8.3.min.js
+	A /1/core/ext/smarty/sysplugins/smarty_internal_resource_registered.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/CookieJar.php
+	A /1/core/ext/net/ip.php
+	A /1/res/biz/shell/shell_blackbluescreen_graybg.css
+	A /1/res/lib/bootstarp-material-design/css/material.min.css
+	A /1/core/ext/smarty/plugins/modifiercompiler.lower.php
+	A /1/res/biz/shell/shell_black.css
+	A /1/core/ext/smarty/sysplugins/smarty_internal_filter_handler.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/GreaterThan.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.strip.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_cacheresource_file.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/NotExists.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Identical.php
+	A /1/res/lib/jquery-1.11.1.min.js
+	A /1/res/lib/di.js
+	A /1/core/base/__inject.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_special_variable.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/No.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_ldelim.php
+	A /1/res/lib/bootstarp-material-design/css/ripples.min.css.map
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_object_function.php
+	A /1/res/biz/shell/bg.jpg
+	A /1/res/lib/bootstrap3/fonts/glyphicons-halflings-regular.woff
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client/Adapter/Proxy.php
+	A /1/cli_debug.php
+	A /1/core/ext/smarty/plugins/function.html_select_time.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_data.php
+	A /1/res/lib/bootstarp-material-design/fonts
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/Se.php
+	A /1/res/lib/bootstarp-material-design/css/material-wfont.min.css.map
+	A /1/core/ext/phpQuery/phpQuery/plugins/WebBrowser.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_registered_function.php
+	A /1/core/ext/smarty/plugins/shared.make_timestamp.php
+	A /1/res/lib/bootstarp-material-design/css/ripples.css
+	A /1/core/ext/smarty/plugins/modifiercompiler.count_paragraphs.php
+	A /1/res/lib/bootstarp-material-design/fonts/Material-Design-Icons.ttf
+	A /1/res/biz/shell/shell_blackscreen_graybg.css
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/MimeType.php
+	A /1/res/biz/shell/di-logo-large-fixvein.png
+	A /1/core/base/__let.php
+	A /1/.htaccess
+	A /1/core/inject
+	A /1/res/lib/momentjs
+	A /1/core/ext/smarty/Smarty.class.php
+	A /1/core/ext/smarty/plugins/function.html_image.php
+	A /1/res/lib/bootstarp-material-design/css
+	A /1/core/base/__route.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_resource_string.php
+	A /1/core/let/shell/shell.php
+	A /1/res/biz/shell/shell_grayzhuanscreen_blackzhuanbg.css
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_while.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.to_charset.php
+	A /1/core/ext/smarty/plugins/function.mailto.php
+	A /1/core/ext/phpQuery
+	A /1/core/ext/smarty/sysplugins/smarty_internal_configfilelexer.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Json/Exception.php
+	A /1/core/tpl/test-template.html
+	A /1/res/biz/shell/di-logo-large-fixcolor.png
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/Hu.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Interface.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Barcode/UpcA.php
+	A /1/core/base/__service.php
+	A /1/core/ext/Snoopy.class.php
+	A /1/core/config/rewrite.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_get_include_path.php
+	A /1/res/biz/shell/login_bg_rev.jpg
+	A /1/core/tpl/404.php
+	A /1/core/ext/OrekiUtil.class.php
+	A /1/res/lib/bootstarp-material-design/js/ripples.min.js
+	A /1/res/lib/bootstarp-material-design/css/material.css
+	A /1/core/base/index.html
+	A /1/core/data/log
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_registered_block.php
+	A /1/res/lib/momentjs/info.txt
+	A /1/core/ext/smarty/plugins/modifiercompiler.indent.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_smartytemplatecompiler.php
+	A /1/core/ext/smarty/plugins/function.html_table.php
+	A /1/core/ext/smarty/plugins/variablefilter.htmlspecialchars.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_extends.php
+	A /1/res/lib/momentjs/moment-with-locales.min.js
+	A /1/core/ext/smarty/sysplugins/smarty_internal_config_file_compiler.php
+	A /1/core/ext/phpQuery/phpQuery/Callback.php
+	A /1/res/biz/shell/shell_gray.css
+	A /1/res/lib/momentjs/moment.min.js
+	A /1/core/base/__env.php
+	A /1/res/lib/bootstarp-material-design/js/material.min.js
+	A /1/core/ext/smarty/sysplugins/smarty_internal_templateparser.php
+	A /1/res/lib/bootstarp-material-design/fonts/Material-Design-Icons.svg
+	A /1/core/ext/smarty/plugins/modifier.capitalize.php
+	A /1/core/ext/smarty/sysplugins/smarty_resource_recompiled.php
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts/example.php
+	A /1/core/tpl/400.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_config_load.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Uri
+	A /1/core
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/Ch.php
+	A /1/core/ext/smarty/plugins/modifier.spacify.php
+	A /1/core/tpl/test-template.php
+	A /1/core/data/cache/index.html
+	A /1/core/ext/smarty/sysplugins/smarty_internal_configfileparser.php
+	A /1/core/ext/phpQuery/phpQuery/DOMEvent.php
+	A /1/res/lib/bootstrap3/js/bootstrap.min.js
+	A /1/core/data/log/index.html
+	A /1/core/do/Larele.do.php
+	A /1/core/config/database.php
+	A /1/res/lib/bootstarp-material-design/css/material.min.css.map
+	A /1/core/do/Template.do.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Alnum.php
+	A /1/res/lib/bootstarp-material-design/fonts/Material-Design-Icons.woff
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Int.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.wordwrap.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.cat.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Cookie.php
+	A /1/core/base/__do.php
+	A /1/core/ext/smarty/SmartyBC.class.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.noprint.php
+	A /1/res/lib/bootstarp-material-design
+	A /1/res/lib/bootstrap3/fonts
+	A /1/res/lib/bootstarp-material-design/js/ripples.min.js.map
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_eval.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname
+	A /1/core/base/__model.php
+	A /1/res/biz
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts/print_websafe.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate
+	A /1/core/ext/smarty/sysplugins/smarty_internal_nocache_insert.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_section.php
+	A /1/core/base/__config.php
+	A /1/res/lib/bootstrap3/css/bootstrap.min.css
+	A /1/res/lib/bootstarp-material-design/js
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Ccnum.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/FilesSize.php
+	A /1/core/config/index.html
+	A /1/res/lib/bootstrap3/fonts/glyphicons-halflings-regular.eot
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_foreach.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_function.php
+	A /1/res/lib/bootstarp-material-design/js/material.js
+	A /1/core/service
+	A /1/core/ext/smarty/plugins/shared.literal_compiler_param.php
+	A /1/core/tpl
+	A /1/res/biz/shell/shell_deepcyangreenscreen_deepbg.css
+	A /1/core/ext/smarty/plugins/shared.mb_unicode.php
+	A /1/core/tpl/test-stemplate.html
+	A /1/core/ext/smarty/plugins/function.cycle.php
+	A /1/res/lib/bootstarp-material-design/css/material.css.map
+	A /1/core/base/__include.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/Size.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/Li.php
+	A /1/core/ext/smarty/plugins/shared.mb_wordwrap.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_break.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_private_block_plugin.php
+	A /1/res/lib/bootstarp-material-design/css/material-wfont.min.css
+	A /1/core/model/index.html
+	A /1/core/ext/net
+	A /1/core/ext/smarty/sysplugins/smarty_internal_compile_if.php
+	A /1/core/ext/smarty/plugins/function.html_radios.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Hostname/Interface.php
+	A /1/res/biz/shell
+	A /1/core/ext/smarty
+	A /1/core/ext/smarty/sysplugins/smarty_resource_custom.php
+	A /1/core/ext/phpQuery/phpQuery/Zend
+	A /1/core/ext/smarty/plugins/modifiercompiler.strip_tags.php
+	A /1/res/lib/bootstarp-material-design/js/material.min.js.map
+	A /1/core/ext/smarty/plugins/function.html_options.php
+	A /1/core/tpl/403.php
+	A /1/res/biz/shell/shell_bluegreenscreen_graybg.css
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts/fix_webroot.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_resource_file.php
+	A /1/core/base/__event.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Abstract.php
+	A /1/core/ext/smarty/plugins/modifiercompiler.unescape.php
+	A /1/core/ext/smarty/sysplugins/smarty_resource_uncompiled.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/File/ImageSize.php
+	A /1/core/ext/phpQuery/phpQuery/bootstrap.example.php
+	A /1/core/base
+	A /1/res/lib/bootstrap3/css/bootstrap-theme.css.map
+	A /1/res/lib/bootstarp-material-design/css/material-wfont.css
+	A /1/core/ext/smarty/sysplugins/smarty_internal_debug.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_templatelexer.php
+	A /1/core/ext/phpQuery/phpQuery/Zend/Http/Client/Adapter
+	A /1/core/ext/smarty/plugins
+	A /1/core/base/__tpl.php
+	A /1/core/ext/smarty/sysplugins/smarty_internal_templatecompilerbase.php
+	A /1/core/ext
+	A /1/core/ext/phpQuery/phpQuery/Zend/Validate/Barcode.php
+	A /1/res/lib/bootstrap3/fonts/glyphicons-halflings-regular.svg
+	A /1/core/ext/phpQuery/phpQuery/plugins/Scripts/__config.example.php
+	A /1/core/data/index.html
+
+导入DI框架
+----------------------------------------------------------------------------
+r2 | fkb_159357@163.com | 2015-04-10 02:21:36 CST
+Changed paths:
+	A /1/.project
+----------------------------------------------------------------------------
+r1 | sae-web@sina.com.cn | 2015-04-10 02:18:16 CST
+Changed paths:
+	A /1/config.yaml
+	A /1
+	A /1/index.php
+
+auto versioning
+----------------------------------------------------------------------------

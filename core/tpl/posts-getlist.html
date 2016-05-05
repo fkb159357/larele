@@ -1,0 +1,11 @@
+{~if empty($list)~}
+	<div class="well diy-posts-lines-blank">这里是空的</div>
+{~else~}
+	{~foreach $list as $k => $v~}
+		<div class="well diy-posts-line" data-id="{~$v->id~}">
+		    <div class="diy-posts-line-title">{~if $v->hide~}<font color="red">[隐]</font>{~/if~}{~$v->title~}<span class="pull-right">{~if $uid eq $v->uid ~}*{~/if~}</span></div>
+		    <div class="diy-posts-line-content ">{~$v->digest~}</div>
+		</div>
+	{~/foreach~}
+	<div class="pull-right">{~spte3 s="posts/p{p}" p=$page~}</div>
+{~/if~}

@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+/* 左侧栏 - 详细页 */
+.diy-content-title{ text-align: center; }
+.diy-content-title-back{ text-align: center; background-color: #dddddd !important; }
+.diy-content-area{ min-height: 500px; }
+
+/* 左侧栏 - 列表 */
+.diy-posts-line{} 
+.diy-posts-lines-blank{
+	min-height: 585px;
+	text-align: center;
+	background-color: rgba(250,250,250,0.8) !important;
+}
+.diy-posts-line-title{
+	font-weight: bold;
+	font-size: 25px;
+    text-shadow: 0 0 5px gray;
+}
+.diy-posts-line-content{margin-left: 5px; margin-top: 10px;}
+
+/* 右侧栏 */
+.diy-right{
+	position: fixed;
+	right: 0;
+	z-index: 0;
+}
+.diy-right-menu{ height: 450px; background-color: #eeeeee !important; }
+.diy-right-tags{ height: 113px; background-color: #f5f5f5 !important; }
+
+/* 底部横排推荐 */
+.diy-bottom-recommend{
+	clear: both;
+	z-index: 1;
+}
+.diy-bottom-recommend-elem{
+	height: 200px;
+	-webkit-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+}
+
+/*Fixed Widgets*/
+.diy-fixed-addbutton{
+	font-size: 25px;
+	text-align: center;
+	color: #cccccc !important;
+	background-color: rgba(50,50,50,0.9) !important; 
+	width: 60px;
+	height: 60px;
+	border-radius: 30px !important;
+	padding-top: 12px;
+	padding-left: 22px;
+	position: fixed;
+	top: 495px;/*560*/
+	right: 0px;/*20*/
+	display: block;
+}
+
+/* Header */
+.diy-header{
+	background-color: rgba(50,50,50,0.85) !important;
+}
+.diy-header .dropdown-menu{ background-color: rgba(20,20,20,0.65) !important; }
+.diy-header .dropdown-menu *{ color: #ddd; }
+
+/* Footer */
+.diy-footer-bottom{ 
+	height: 450px;
+	background-color: rgba(50,50,50,0.25) !important;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
