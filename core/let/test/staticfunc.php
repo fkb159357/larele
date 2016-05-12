@@ -1,5 +1,4 @@
 <?php
-
 import('debug/showTrace');
 
 //重复调用含有static变量的递归函数
