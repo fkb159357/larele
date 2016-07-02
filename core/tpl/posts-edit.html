@@ -35,6 +35,14 @@
         	</div>
         </div>
         <div class="form-group">
+            <label for="sort" class="col-xs-2 control-label">是否河蟹</label>
+            <div class="col-xs-10 checkbox" style="padding:inherit !important;">
+                <label>
+                    <input name="hide" {~if $p->hide~}checked="checked"{~/if~} type="checkbox"><span class="checkbox-material"></span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-xs-10 col-xs-offset-2">
                 <button class="btn btn-default btn-raised">暂存</button>
                 <button type="submit" class="btn btn-primary btn-raised pull-right">发布</button>

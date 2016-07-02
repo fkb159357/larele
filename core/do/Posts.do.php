@@ -12,6 +12,7 @@ class PostsDo extends DIDo {
         5 => array('update_time', '更新时间'),
         6 => array('uid', '作者UID'),
         7 => array('nickname', '作者'), //附加
+        8 => array('hide', '河蟹'),
     );
     
     protected function _init(){
@@ -62,6 +63,7 @@ class PostsDo extends DIDo {
                 'uid' => $uid,
                 'urlalia' => arg('urlalia'),
                 'sort' => (int) arg('sort'),
+                'hide' => arg('hide')=='on' ? 1 : 0,
             );
             $op = supertable('Posts')->insert($data);
             $op ? putalert(null, url("posts/edit/{$op}")) : putalert('failed');
@@ -89,6 +91,7 @@ class PostsDo extends DIDo {
                 'uid' => $uid,
                 'urlalia' => arg('urlalia'),
                 'sort' => (int) arg('sort'),
+                'hide' => arg('hide')=='on' ? 1 : 0,
             );
             $op = supertable('Posts')->update(compact('id'), $data);
             $op ? putalert(null, url("posts/edit/{$id}")) : putalert('failed');//failed on 0 or false
