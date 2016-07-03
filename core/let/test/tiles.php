@@ -8,10 +8,10 @@
 	<link href="./res/lib/bootstarp-material-design/css/ripples.min.css" rel="stylesheet">
 	<link href="./res/lib/bootstarp-material-design/css/material-wfont.min.css" rel="stylesheet">
 	
-	<script src="./res/lib/jquery-1.11.1.min.js"></script>
-	<script src="./res/lib/underscore-1.7-min.js"></script>
-	<script src="./res/lib/momentjs/moment.min.js"></script>
-	<script src="./res/lib/momentjs/moment-with-locales.min.js"></script>
+	<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/underscore.js/1.7.0/underscore-min.js"></script>
+	<script src="//cdn.bootcss.com/moment.js/2.13.0/moment.min.js"></script>
+    <script src="//cdn.bootcss.com/moment.js/2.13.0/moment-with-locales.min.js"></script>
 	<script src="./res/lib/di.js"></script>
 </head>
 <body>
