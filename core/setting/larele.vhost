@@ -12,6 +12,22 @@ Apache HP PC in wamp 3:
 
 --------------------------------------------------------------
 
+Apache Company PC in wamp 3:
+
+<VirtualHost *:80>
+	ServerName larele.me
+    ErrorLog "logs/larele.me-error.log"
+    CustomLog "logs/larele.me-access.log" common
+	DocumentRoot d:/SERV_WORKSPACE/pub/larele
+	<Directory  "d:/SERV_WORKSPACE/pub/larele/">
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Require local
+	</Directory>
+</VirtualHost>
+
+--------------------------------------------------------------
+
 Apache HP PC in wamp 2.2:
 
 NameVirtualHost larele.me:80
