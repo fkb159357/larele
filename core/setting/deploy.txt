@@ -34,6 +34,7 @@ mv www.larele.com/  www.larele.com.trash/
 mv larele/ www.larele.com/
 rm www.larele.com/.git -r -f
 chmod -R 767 www.larele.com/core/data/
+chmod -R 767 www.larele.com/res/tmp/
 rm -f -r www.larele.com.trash/
 
 
