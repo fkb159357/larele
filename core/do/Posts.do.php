@@ -19,7 +19,7 @@ class PostsDo extends DIDo {
         $this->me = LoginRuntime::getItem(LR_RUNTIME_LOGIN_INFO);//获取登录态
         @$this->uid = $this->me->id;
         $this->T = strtolower(DI_DO_MODULE . '-' . DI_DO_FUNC) . '.html';
-        $this->pageTitle = ucfirst(DI_DO_MODULE.'-'.DI_DO_FUNC);
+        $this->pageTitle = '';
     }
     
     /**
@@ -43,7 +43,8 @@ class PostsDo extends DIDo {
         false === $find && putalert('not found');
         $this->p = $find;
         $this->pid = $find->id;
-        $this->pageTitle .= ' - '.$find->title;
+        //$this->pageTitle .= ' - '.$find->title;
+        $this->pageTitle .= $find->title;
         $this->stpl();
     }
     

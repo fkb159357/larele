@@ -5,42 +5,39 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="./">Larele</a>
+        <a class="navbar-brand" href="./">Lr</a>
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-            <li class="active diy-header-title"><a href="javascript:void(0)">{~if $pageTitle~}{~$pageTitle|mb_substr:0:30:'utf-8'~}{~else~}无标题{~/if~}</a></li>
-            <li><a href="/posts">呵呵</a></li>
+            {~if $pageTitle~}<li class="active diy-header-title"><a href="javascript:void(0)">{~$pageTitle|mb_substr:0:30:'utf-8'~}</a></li>{~/if~}
+            {~if $pageTitle~}<li><a href="/posts">列表</a></li>{~/if~}
             <li class="dropdown">
-                <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">呵呵<b class="caret"></b></a>
+                <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">〓〓<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">呵呵</a></li>
-                    <li><a href="javascript:void(0)">呵呵</a></li>
-                    <li><a href="javascript:void(0)">呵呵</a></li>
+                    <li><a href="/link/to/conoha.html" target="_blank">前往体验Conoha!</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header"></li>
-		            <li><a href="/link/to/kusha.html" target="_blank">某社区</a></li>
-		            <li><a href="/link/to/conoha.html" target="_blank">前往体验Conoha!</a></li>
+		            <!-- <li><a href="/link/to/kusha.html" target="_blank">某社区</a></li> -->
 		            <li><a href="http://www.vultr.com/?ref=6898854" target="_blank">前往体验Vultr!</a></li>
                 </ul>
             </li>
         </ul>
         <form class="navbar-form navbar-left">
-            <input type="text" class="form-control col-lg-8" placeholder="查水表">
+            <input type="text" class="form-control col-lg-8" placeholder="查">
         </form>
         <ul class="nav navbar-nav navbar-right">
-        	<li><a href="javascript:window.open('//note.larele.com/', '_blank')">某Ghost</a></li>
-            <li><a href="javascript:window.open('//miku.us/', '_blank')">生放送</a></li>
-            <li><a href="/link/to/fm.html" target="_blank">肉串电台</a></li>
+        	<li><a href="javascript:window.open('//note.larele.com/', '_blank')">废品0</a></li>
+            <li><a href="javascript:window.open('//miku.us/', '_blank')">废品1</a></li>
+            <li><a href="/link/to/fm.html" target="_blank">废品2</a></li>
             <li><a href="/link.html" target="_self">MAP</a></li>
             <li class="dropdown">
-                <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{~if $me~}{~$me->nickname~}{~else~}封印{~/if~}<b class="caret"></b></a>
+                <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{~if $me~}{~$me->nickname~}{~else~}SYS{~/if~}<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">呵呵1</a></li>
-                    <li><a href="javascript:void(0)">呵呵2</a></li>
-                    <li><a href="javascript:void(0)">呵呵3</a></li>
+                    <li><a href="javascript:void(0)">待定1</a></li>
+                    <li><a href="javascript:void(0)">待定2</a></li>
+                    <li><a href="javascript:void(0)">待定3</a></li>
                     <li class="divider"></li>
-                    <li><a href="javascript:void(0)">呵呵4</a></li>
+                    <li><a href="javascript:void(0)">待定4</a></li>
                 </ul>
             </li>
             <li>&nbsp;</li>
