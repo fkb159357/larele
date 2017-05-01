@@ -28,7 +28,7 @@ class PostsDo extends DIDo {
     function getList($p = 1){
         $P = supertable('Posts');
         $conds = array();
-        if (! $this->me || $this->me->passport == 'root') $conds['hide'] = 0;//游客禁看隐藏的
+        if (! $this->me || ! Rooter::isRooter($this->me->passport)) $conds['hide'] = 0;//非管理员禁看隐藏的
         $list = $P->select($conds, '', 'sort ASC,update_time DESC', array($p, 8, 8));
         $this->list = $list ?: array();
         $this->page = $P->page;
@@ -38,7 +38,7 @@ class PostsDo extends DIDo {
     function content($id = null){
         is_numeric($id) || putalert('param err');
         $conds = compact('id');
-        if (! $this->me) $conds['hide'] = 0;
+        if (! $this->me || ! Rooter::isRooter($this->me->passport)) $conds['hide'] = 0;//非管理员禁看隐藏的
         $find = supertable('Posts')->find($conds);
         false === $find && putalert('not found');
         $this->p = $find;
