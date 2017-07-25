@@ -1,3 +1,48 @@
+git push -u origin master
+
+需要定期更新hosts
+180.97.163.93 git.oschina.net
+
+# clone方式更新
+# 前置命令：cd /home/wwwroot; git clone https://git.oschina.net/Ltre/larele.git; mv /home/wwwroot/larele /home/wwwroot/www.larele.com; mkdir /home/wwwroot/www.larele.com/core/data; mkdir /home/wwwroot/www.larele.com/core/data/cache; mkdir /home/wwwroot/www.larele.com/core/data/log
+
+mkdir /home/wwwbackup/
+cd /home/wwwroot/
+tar -cf /home/wwwbackup/www.larele.com.tar  www.larele.com/
+git clone https://git.oschina.net/Ltre/larele.git
+rm -f -r larele/core/data/
+mv www.larele.com/core/data/  larele/core/data/
+mv www.larele.com/  www.larele.com.trash/
+mv larele/ www.larele.com/
+rm www.larele.com/.git -r -f
+chmod -R 767 www.larele.com/core/data/
+rm -f -r www.larele.com.trash/
+
+
+
+# pull方式更新
+#（前置命令：mkdir /home/wwwbackup; mkdir /home/wwwsrc; cd /home/wwwsrc; git clone https://git.oschina.net/Ltre/larele.git ）
+
+
+cd /home/wwwsrc/larele
+git pull
+cp /home/wwwsrc/larele -r  /home/wwwroot/larele
+cd /home/wwwroot
+tar -cf /home/wwwbackup/www.larele.com.tar  www.larele.com/
+rm -f -r larele/core/data/
+mv www.larele.com/core/data/  larele/core/data/
+mv www.larele.com/  www.larele.com.trash/
+mv larele/ www.larele.com/
+rm www.larele.com/.git -r -f
+chmod -R 767 www.larele.com/core/data/
+rm -f -r www.larele.com.trash/
+
+
+
+---------------------------------------以上旧版，使用OSC--------------------------------------------
+---------------------------------------以下新版，使用github-----------------------------------------
+
+
 
 git push -u origin master
 
@@ -37,52 +82,3 @@ chmod -R 767 www.larele.com/core/data/
 chmod -R 767 www.larele.com/res/tmp/
 rm -f -r www.larele.com.trash/
 
-
-
-
-
-
-
-
-
----------------------------------------以下旧版，使用OSC-----------------------------------------
-
-
-git push -u origin master
-
-需要定期更新hosts
-180.97.163.93 git.oschina.net
-
-# clone方式更新
-# 前置命令：cd /home/wwwroot; git clone https://git.oschina.net/Ltre/larele.git; mv /home/wwwroot/larele /home/wwwroot/www.larele.com; mkdir /home/wwwroot/www.larele.com/core/data; mkdir /home/wwwroot/www.larele.com/core/data/cache; mkdir /home/wwwroot/www.larele.com/core/data/log
-
-mkdir /home/wwwbackup/
-cd /home/wwwroot/
-tar -cf /home/wwwbackup/www.larele.com.tar  www.larele.com/
-git clone https://git.oschina.net/Ltre/larele.git
-rm -f -r larele/core/data/
-mv www.larele.com/core/data/  larele/core/data/
-mv www.larele.com/  www.larele.com.trash/
-mv larele/ www.larele.com/
-rm www.larele.com/.git -r -f
-chmod -R 767 www.larele.com/core/data/
-rm -f -r www.larele.com.trash/
-
-
-
-# pull方式更新
-#（前置命令：mkdir /home/wwwbackup; mkdir /home/wwwsrc; cd /home/wwwsrc; git clone https://git.oschina.net/Ltre/larele.git ）
-
-
-cd /home/wwwsrc/larele
-git pull
-cp /home/wwwsrc/larele -r  /home/wwwroot/larele
-cd /home/wwwroot
-tar -cf /home/wwwbackup/www.larele.com.tar  www.larele.com/
-rm -f -r larele/core/data/
-mv www.larele.com/core/data/  larele/core/data/
-mv www.larele.com/  www.larele.com.trash/
-mv larele/ www.larele.com/
-rm www.larele.com/.git -r -f
-chmod -R 767 www.larele.com/core/data/
-rm -f -r www.larele.com.trash/
