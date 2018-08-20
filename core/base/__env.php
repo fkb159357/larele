@@ -96,7 +96,8 @@ if(!defined('DI_PAGE_503'))
 if(DI_DEBUG_MODE){
     //开启PHP错误提示，但关闭坑爹的严格模式（E_STRICT）
     ini_set("display_errors", "On");
-    error_reporting(E_ALL & ~E_STRICT);
+    // error_reporting(E_ALL & ~E_STRICT);
+    error_reporting(E_ALL & E_NOTICE);
 }
 else{
     //关闭PHP错误提示，也关闭坑爹的严格模式（E_STRICT）
