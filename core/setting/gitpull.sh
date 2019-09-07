@@ -1,3 +1,12 @@
+if [ ! -d "/home/wwwroot" ]; then
+    mkdir /home/wwwroot;
+fi;
+if [ ! -d "/home/wwwbackup" ]; then
+    mkdir /home/wwwbackup;
+fi;
+zip -r /home/wwwbackup/larele.zip /home/wwwroot/larele/*
+
+
 if [ ! -d "/home/wwwsrc" ]; then
     mkdir /home/wwwsrc;
 fi;
@@ -27,7 +36,6 @@ if [ ! -d "/home/wwwroot/larele/core/data" ]; then
     mkdir /home/wwwroot/larele/res/tmp;
 fi
 
-zip -r /home/wwwbackup/larele.zip /home/wwwroot/larele/*
 mv /home/wwwroot/larele /home/wwwroot/larele.trash;
 cp /home/wwwsrc/larele -r /home/wwwroot/larele;
 rm /home/wwwroot/larele/.git -rf
