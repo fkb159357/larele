@@ -26,8 +26,6 @@ class PostsDo extends DIDo {
      * @alias posts/list => posts/getlist
      */
     function getList($p = 1){
-        die('404 - HTTP Broken Shoes');
-        
         $P = supertable('Posts');
         $conds = array();
         if (! $this->me || ! Rooter::isRooter($this->me->passport)) $conds['hide'] = 0;//非管理员禁看隐藏的
